@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Emojicons-Keyboard.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Emojicons.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>431B97D619D413A30047B810</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>431B97EA19D4144E0047B810</key>
 		<dict>
 			<key>primary</key>
 			<true/>

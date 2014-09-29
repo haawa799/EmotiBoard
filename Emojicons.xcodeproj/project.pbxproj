@@ -13,6 +13,18 @@
 		431B97CF19D413A30047B810 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B97CE19D413A30047B810 /* Images.xcassets */; };
 		431B97D219D413A30047B810 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97D019D413A30047B810 /* LaunchScreen.xib */; };
 		431B97DE19D413A30047B810 /* EmojiconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97DD19D413A30047B810 /* EmojiconsTests.swift */; };
+		431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97EF19D4144E0047B810 /* KeyboardViewController.swift */; };
+		431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FA19D415AC0047B810 /* KeyboardView.xib */; };
+		431B97FD19D41AB20047B810 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FC19D41AB20047B810 /* globe.png */; };
+		431B97FF19D41B590047B810 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FE19D41B590047B810 /* history.png */; };
+		431B980119D441E50047B810 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980019D441E50047B810 /* star.png */; };
+		431B980319D442AC0047B810 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980219D442AC0047B810 /* smiley.png */; };
+		431B980519D443290047B810 /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980419D443290047B810 /* backspace.png */; };
+		431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980719D449250047B810 /* EmojiFlowLayout.swift */; };
+		431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980919D4497A0047B810 /* EmojiCell.swift */; };
+		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
+		431B981819D955EE0047B810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981719D955EE0047B810 /* TitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +35,35 @@
 			remoteGlobalIDString = 431B97C119D413A30047B810;
 			remoteInfo = Emojicons;
 		};
+		431B97F119D4144E0047B810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 431B97BA19D413A20047B810 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 431B97EA19D4144E0047B810;
+			remoteInfo = "Emojicons-Keyboard";
+		};
+		431B97F419D4144E0047B810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 431B97BA19D413A20047B810 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 431B97EA19D4144E0047B810;
+			remoteInfo = "Emojicons-Keyboard";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		431B97F919D4144E0047B810 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		431B97C219D413A30047B810 /* Emojicons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojicons.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +76,19 @@
 		431B97D719D413A30047B810 /* EmojiconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B97DC19D413A30047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97DD19D413A30047B810 /* EmojiconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiconsTests.swift; sourceTree = "<group>"; };
+		431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Emojicons-Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		431B97EE19D4144E0047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		431B97EF19D4144E0047B810 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		431B97FA19D415AC0047B810 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		431B97FC19D41AB20047B810 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
+		431B97FE19D41B590047B810 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		431B980019D441E50047B810 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		431B980219D442AC0047B810 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
+		431B980419D443290047B810 /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
+		431B980719D449250047B810 /* EmojiFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlowLayout.swift; sourceTree = "<group>"; };
+		431B980919D4497A0047B810 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
+		431B981219D595460047B810 /* EmojiCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionDataSource.swift; sourceTree = "<group>"; };
+		431B981719D955EE0047B810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +106,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		431B97E819D4144E0047B810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +121,7 @@
 			children = (
 				431B97C419D413A30047B810 /* Emojicons */,
 				431B97DA19D413A30047B810 /* EmojiconsTests */,
+				431B97EC19D4144E0047B810 /* Emojicons-Keyboard */,
 				431B97C319D413A30047B810 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +131,7 @@
 			children = (
 				431B97C219D413A30047B810 /* Emojicons.app */,
 				431B97D719D413A30047B810 /* EmojiconsTests.xctest */,
+				431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +174,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		431B97EC19D4144E0047B810 /* Emojicons-Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				431B97EF19D4144E0047B810 /* KeyboardViewController.swift */,
+				431B981219D595460047B810 /* EmojiCollectionDataSource.swift */,
+				431B97FA19D415AC0047B810 /* KeyboardView.xib */,
+				431B980719D449250047B810 /* EmojiFlowLayout.swift */,
+				431B980919D4497A0047B810 /* EmojiCell.swift */,
+				431B981719D955EE0047B810 /* TitleView.swift */,
+				431B97FC19D41AB20047B810 /* globe.png */,
+				431B97FE19D41B590047B810 /* history.png */,
+				431B980019D441E50047B810 /* star.png */,
+				431B980219D442AC0047B810 /* smiley.png */,
+				431B980419D443290047B810 /* backspace.png */,
+				431B97ED19D4144E0047B810 /* Supporting Files */,
+			);
+			path = "Emojicons-Keyboard";
+			sourceTree = "<group>";
+		};
+		431B97ED19D4144E0047B810 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				431B97EE19D4144E0047B810 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,10 +211,13 @@
 				431B97BE19D413A30047B810 /* Sources */,
 				431B97BF19D413A30047B810 /* Frameworks */,
 				431B97C019D413A30047B810 /* Resources */,
+				431B97F919D4144E0047B810 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				431B97F219D4144E0047B810 /* PBXTargetDependency */,
+				431B97F519D4144E0047B810 /* PBXTargetDependency */,
 			);
 			name = Emojicons;
 			productName = Emojicons;
@@ -150,6 +242,23 @@
 			productReference = 431B97D719D413A30047B810 /* EmojiconsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		431B97EA19D4144E0047B810 /* Emojicons-Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "Emojicons-Keyboard" */;
+			buildPhases = (
+				431B97E719D4144E0047B810 /* Sources */,
+				431B97E819D4144E0047B810 /* Frameworks */,
+				431B97E919D4144E0047B810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Emojicons-Keyboard";
+			productName = "Emojicons-Keyboard";
+			productReference = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,6 +274,9 @@
 					431B97D619D413A30047B810 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 431B97C119D413A30047B810;
+					};
+					431B97EA19D4144E0047B810 = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -183,6 +295,7 @@
 			targets = (
 				431B97C119D413A30047B810 /* Emojicons */,
 				431B97D619D413A30047B810 /* EmojiconsTests */,
+				431B97EA19D4144E0047B810 /* Emojicons-Keyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +315,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		431B97E919D4144E0047B810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431B980519D443290047B810 /* backspace.png in Resources */,
+				431B97FD19D41AB20047B810 /* globe.png in Resources */,
+				431B980119D441E50047B810 /* star.png in Resources */,
+				431B97FF19D41B590047B810 /* history.png in Resources */,
+				431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */,
+				431B980319D442AC0047B810 /* smiley.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +351,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		431B97E719D4144E0047B810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */,
+				431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */,
+				431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */,
+				431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */,
+				431B981819D955EE0047B810 /* TitleView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -232,6 +370,16 @@
 			isa = PBXTargetDependency;
 			target = 431B97C119D413A30047B810 /* Emojicons */;
 			targetProxy = 431B97D819D413A30047B810 /* PBXContainerItemProxy */;
+		};
+		431B97F219D4144E0047B810 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 431B97EA19D4144E0047B810 /* Emojicons-Keyboard */;
+			targetProxy = 431B97F119D4144E0047B810 /* PBXContainerItemProxy */;
+		};
+		431B97F519D4144E0047B810 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 431B97EA19D4144E0047B810 /* Emojicons-Keyboard */;
+			targetProxy = 431B97F419D4144E0047B810 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -388,6 +536,30 @@
 			};
 			name = Release;
 		};
+		431B97F719D4144E0047B810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		431B97F819D4144E0047B810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -407,6 +579,7 @@
 				431B97E319D413A30047B810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmojiconsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +588,16 @@
 				431B97E619D413A30047B810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "Emojicons-Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				431B97F719D4144E0047B810 /* Debug */,
+				431B97F819D4144E0047B810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
