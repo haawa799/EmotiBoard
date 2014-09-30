@@ -9,10 +9,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Emojicons_Keyboard" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="3RN-pf-iCC" id="fM9-3t-SwV"/>
-                <outlet property="emojiconsModeButton" destination="cHx-bP-Rca" id="1Hq-84-Chp"/>
-                <outlet property="favoritesModeButton" destination="vdx-uI-5oT" id="B4t-aL-2ZH"/>
-                <outlet property="historyModeButton" destination="Qip-bZ-MuK" id="G9R-xH-E5R"/>
                 <outlet property="titleView" destination="hRP-qc-8GD" id="s99-1v-Xrz"/>
+                <outlet property="titleViewHeightConstraint" destination="tKk-We-va8" id="AMa-L0-48u"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,111 +24,181 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-24-dlo" userLabel="Bottom bar">
                             <rect key="frame" x="0.0" y="174" width="378" height="35"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-Tv-ODS">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-Tv-ODS" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="76" height="35"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRD-uC-yXI">
-                                            <rect key="frame" x="22" y="2" width="32" height="32"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNS-UC-zWZ">
+                                            <rect key="frame" x="2" y="2" width="72" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1K0-I2-T8a">
+                                                    <rect key="frame" x="22" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="1K0-I2-T8a" secondAttribute="height" multiplier="1:1" id="HD1-UX-eHD"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="globe.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="vRD-uC-yXI" secondAttribute="height" multiplier="1:1" id="PCH-Ow-cBm"/>
+                                                <constraint firstAttribute="height" secondItem="1K0-I2-T8a" secondAttribute="height" multiplier="1.1" id="64h-LH-4Os"/>
+                                                <constraint firstAttribute="centerY" secondItem="1K0-I2-T8a" secondAttribute="centerY" id="7vT-ag-698"/>
+                                                <constraint firstAttribute="centerX" secondItem="1K0-I2-T8a" secondAttribute="centerX" id="r9D-4q-aOo"/>
                                             </constraints>
-                                            <state key="normal" backgroundImage="globe.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="nextKeyboard:" destination="-1" eventType="touchUpInside" id="lAH-nk-sA9"/>
-                                            </connections>
-                                        </button>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" secondItem="vRD-uC-yXI" secondAttribute="height" multiplier="1.1" id="HFX-tt-tBS"/>
-                                        <constraint firstAttribute="width" secondItem="vRD-uC-yXI" secondAttribute="width" multiplier="1.2" id="JSX-zh-wEj"/>
-                                        <constraint firstAttribute="centerX" secondItem="vRD-uC-yXI" secondAttribute="centerX" id="UZo-xh-HgK"/>
-                                        <constraint firstAttribute="centerY" secondItem="vRD-uC-yXI" secondAttribute="centerY" id="g0b-2t-7zI"/>
+                                        <constraint firstAttribute="centerY" secondItem="ZNS-UC-zWZ" secondAttribute="centerY" id="6C0-Jh-47f"/>
+                                        <constraint firstAttribute="centerX" secondItem="ZNS-UC-zWZ" secondAttribute="centerX" id="G9M-I5-aUy"/>
+                                        <constraint firstItem="ZNS-UC-zWZ" firstAttribute="top" secondItem="T6F-Tv-ODS" secondAttribute="top" constant="2" id="NbS-dc-llE"/>
+                                        <constraint firstItem="ZNS-UC-zWZ" firstAttribute="leading" secondItem="T6F-Tv-ODS" secondAttribute="leading" constant="2" id="kiR-pJ-M6M"/>
+                                        <constraint firstAttribute="trailing" secondItem="ZNS-UC-zWZ" secondAttribute="trailing" constant="2" id="xhB-BW-9Ox"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="JSX-zh-wEj"/>
-                                        </mask>
-                                    </variation>
+                                    <connections>
+                                        <outlet property="backgroundView" destination="ZNS-UC-zWZ" id="4y8-cW-E32"/>
+                                    </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-YF-rxA">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-YF-rxA" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
                                     <rect key="frame" x="76" y="0.0" width="75" height="35"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHx-bP-Rca">
-                                            <rect key="frame" x="22" y="2" width="32" height="32"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj8-e7-8KL">
+                                            <rect key="frame" x="2" y="2" width="72" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDl-gC-2k5">
+                                                    <rect key="frame" x="22" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="bDl-gC-2k5" secondAttribute="height" multiplier="1:1" id="t3D-6I-EcE"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="smiley.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="cHx-bP-Rca" secondAttribute="height" multiplier="1:1" id="fXY-JC-0YM"/>
+                                                <constraint firstAttribute="centerX" secondItem="bDl-gC-2k5" secondAttribute="centerX" id="AlU-Xf-8E0"/>
+                                                <constraint firstAttribute="height" secondItem="bDl-gC-2k5" secondAttribute="height" multiplier="1.1" id="oHO-xX-t3W"/>
+                                                <constraint firstAttribute="centerY" secondItem="bDl-gC-2k5" secondAttribute="centerY" id="y6n-RW-Jul"/>
                                             </constraints>
-                                            <state key="normal" backgroundImage="smiley.png"/>
-                                        </button>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.079560536180000002" green="0.8725585938" blue="0.172511266" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerY" secondItem="cHx-bP-Rca" secondAttribute="centerY" id="Jj3-ej-Ozd"/>
-                                        <constraint firstAttribute="height" secondItem="cHx-bP-Rca" secondAttribute="height" multiplier="1.1" id="iOj-QB-XXO"/>
-                                        <constraint firstAttribute="centerX" secondItem="cHx-bP-Rca" secondAttribute="centerX" id="t6t-By-FBM"/>
+                                        <constraint firstItem="Uj8-e7-8KL" firstAttribute="leading" secondItem="cWo-YF-rxA" secondAttribute="leading" constant="2" id="9gh-Xp-inP"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uj8-e7-8KL" secondAttribute="trailing" constant="1" id="aLX-np-8Xq"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uj8-e7-8KL" secondAttribute="bottom" constant="2" id="gBK-TC-wam"/>
+                                        <constraint firstItem="Uj8-e7-8KL" firstAttribute="top" secondItem="cWo-YF-rxA" secondAttribute="top" constant="2" id="sPE-Tf-4a3"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="backgroundView" destination="Uj8-e7-8KL" id="uUN-b9-3vf"/>
+                                    </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-MF-KlB">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-MF-KlB" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
                                     <rect key="frame" x="151" y="0.0" width="76" height="35"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdx-uI-5oT">
-                                            <rect key="frame" x="22" y="2" width="32" height="32"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-QB-1nn">
+                                            <rect key="frame" x="2" y="2" width="72" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9a-G8-DBU">
+                                                    <rect key="frame" x="22" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="n9a-G8-DBU" secondAttribute="height" multiplier="1:1" id="MOx-hr-x9c"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="star.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="vdx-uI-5oT" secondAttribute="height" multiplier="1:1" id="tLT-ii-jBu"/>
+                                                <constraint firstAttribute="centerY" secondItem="n9a-G8-DBU" secondAttribute="centerY" id="3Sj-Q5-jCE"/>
+                                                <constraint firstAttribute="centerX" secondItem="n9a-G8-DBU" secondAttribute="centerX" id="TOA-g3-GIy"/>
+                                                <constraint firstAttribute="height" secondItem="n9a-G8-DBU" secondAttribute="height" multiplier="1.1" id="d1C-8r-V5G"/>
                                             </constraints>
-                                            <state key="normal" backgroundImage="star.png"/>
-                                        </button>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.20884371569999999" green="0.32898739510000002" blue="0.61597741169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerY" secondItem="vdx-uI-5oT" secondAttribute="centerY" id="Uel-2m-Tmv"/>
-                                        <constraint firstAttribute="centerX" secondItem="vdx-uI-5oT" secondAttribute="centerX" id="ViO-bz-MtE"/>
-                                        <constraint firstAttribute="height" secondItem="vdx-uI-5oT" secondAttribute="height" multiplier="1.1" id="zkD-Mg-Fu5"/>
+                                        <constraint firstItem="nBT-QB-1nn" firstAttribute="leading" secondItem="4Ti-MF-KlB" secondAttribute="leading" constant="2" id="7Ku-dB-uat"/>
+                                        <constraint firstItem="nBT-QB-1nn" firstAttribute="top" secondItem="4Ti-MF-KlB" secondAttribute="top" constant="2" id="dIL-BW-ZfU"/>
+                                        <constraint firstAttribute="trailing" secondItem="nBT-QB-1nn" secondAttribute="trailing" constant="2" id="ep7-ld-zYP"/>
+                                        <constraint firstAttribute="bottom" secondItem="nBT-QB-1nn" secondAttribute="bottom" constant="2" id="sH4-3u-tBD"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="backgroundView" destination="nBT-QB-1nn" id="Rzn-7s-Gam"/>
+                                    </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-iw-RsQ">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-iw-RsQ" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
                                     <rect key="frame" x="227" y="0.0" width="75" height="35"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qip-bZ-MuK">
-                                            <rect key="frame" x="21" y="2" width="32" height="32"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-95-L4B">
+                                            <rect key="frame" x="2" y="2" width="71" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-4R-4Cn">
+                                                    <rect key="frame" x="22" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="oPx-4R-4Cn" secondAttribute="height" multiplier="1:1" id="j2Y-cQ-3Re"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="history.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Qip-bZ-MuK" secondAttribute="height" multiplier="1:1" id="JM2-Cj-GJH"/>
+                                                <constraint firstAttribute="centerY" secondItem="oPx-4R-4Cn" secondAttribute="centerY" id="YwC-SH-0is"/>
+                                                <constraint firstAttribute="centerX" secondItem="oPx-4R-4Cn" secondAttribute="centerX" id="yOd-Qy-7yM"/>
+                                                <constraint firstAttribute="height" secondItem="oPx-4R-4Cn" secondAttribute="height" multiplier="1.1" id="zaL-yh-eVi"/>
                                             </constraints>
-                                            <state key="normal" backgroundImage="history.png">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
+                                        </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerY" secondItem="Qip-bZ-MuK" secondAttribute="centerY" id="1n2-xW-13g"/>
-                                        <constraint firstAttribute="height" secondItem="Qip-bZ-MuK" secondAttribute="height" multiplier="1.1" id="9q4-Uc-nYs"/>
-                                        <constraint firstAttribute="centerX" secondItem="Qip-bZ-MuK" secondAttribute="centerX" id="pH0-3Z-2Qq"/>
+                                        <constraint firstAttribute="trailing" secondItem="bPW-95-L4B" secondAttribute="trailing" constant="2" id="BDW-R9-MYM"/>
+                                        <constraint firstItem="bPW-95-L4B" firstAttribute="leading" secondItem="cFT-iw-RsQ" secondAttribute="leading" constant="2" id="DYl-hP-0cy"/>
+                                        <constraint firstAttribute="bottom" secondItem="bPW-95-L4B" secondAttribute="bottom" constant="2" id="qu4-N0-PvL"/>
+                                        <constraint firstItem="bPW-95-L4B" firstAttribute="top" secondItem="cFT-iw-RsQ" secondAttribute="top" constant="2" id="zm3-sw-5ix"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="backgroundView" destination="bPW-95-L4B" id="uaR-IE-d2z"/>
+                                    </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-kf-cX1">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-kf-cX1" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
                                     <rect key="frame" x="302" y="0.0" width="76" height="35"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ec-ZW-dac">
-                                            <rect key="frame" x="19" y="-1" width="38" height="38"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdG-7F-gPe">
+                                            <rect key="frame" x="2" y="2" width="72" height="31"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huT-aA-NDS">
+                                                    <rect key="frame" x="22" y="2" width="28" height="28"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="huT-aA-NDS" secondAttribute="height" multiplier="1:1" id="meh-6u-3e1"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="backspace.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="8Ec-ZW-dac" secondAttribute="height" multiplier="1:1" id="rev-pn-0ik"/>
+                                                <constraint firstAttribute="centerX" secondItem="huT-aA-NDS" secondAttribute="centerX" id="7c8-Hc-ULr"/>
+                                                <constraint firstAttribute="centerY" secondItem="huT-aA-NDS" secondAttribute="centerY" id="D1U-Nh-AB8"/>
+                                                <constraint firstAttribute="height" secondItem="huT-aA-NDS" secondAttribute="height" multiplier="1.1" id="jdi-VG-7fX"/>
                                             </constraints>
-                                            <state key="normal" backgroundImage="backspace.png"/>
-                                            <connections>
-                                                <action selector="backspaceAction:" destination="-1" eventType="touchUpInside" id="Xid-kn-SMD"/>
-                                            </connections>
-                                        </button>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerX" secondItem="8Ec-ZW-dac" secondAttribute="centerX" id="3ha-qG-VbN"/>
-                                        <constraint firstAttribute="centerY" secondItem="8Ec-ZW-dac" secondAttribute="centerY" id="Ai5-IK-blL"/>
-                                        <constraint firstItem="8Ec-ZW-dac" firstAttribute="height" secondItem="Tzz-kf-cX1" secondAttribute="height" multiplier="1.1" id="rix-sR-oDj"/>
+                                        <constraint firstItem="DdG-7F-gPe" firstAttribute="leading" secondItem="Tzz-kf-cX1" secondAttribute="leading" constant="2" id="Jgn-lW-czR"/>
+                                        <constraint firstAttribute="bottom" secondItem="DdG-7F-gPe" secondAttribute="bottom" constant="2" id="q6D-B5-MbX"/>
+                                        <constraint firstAttribute="trailing" secondItem="DdG-7F-gPe" secondAttribute="trailing" constant="2" id="q7z-wM-RFB"/>
+                                        <constraint firstItem="DdG-7F-gPe" firstAttribute="top" secondItem="Tzz-kf-cX1" secondAttribute="top" constant="2" id="tDu-nE-qon"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="backgroundView" destination="DdG-7F-gPe" id="SOP-ye-Ms8"/>
+                                    </connections>
                                 </view>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -199,6 +267,7 @@
                                 <constraint firstItem="Z9S-1z-1Pb" firstAttribute="leading" secondItem="hRP-qc-8GD" secondAttribute="leading" constant="8" id="mBX-Hk-4OR"/>
                                 <constraint firstAttribute="trailing" secondItem="lRT-dm-vIL" secondAttribute="trailing" constant="8" id="pCb-hk-8zX"/>
                                 <constraint firstItem="lRT-dm-vIL" firstAttribute="leading" secondItem="Z9S-1z-1Pb" secondAttribute="trailing" id="qnY-Qg-W60"/>
+                                <constraint firstAttribute="height" constant="26" id="tKk-We-va8"/>
                             </constraints>
                             <connections>
                                 <outlet property="label" destination="Z9S-1z-1Pb" id="Xp2-3Q-nle"/>
@@ -227,6 +296,7 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="GBH-VG-V0t"/>
                             <exclude reference="TTi-Jz-qdA"/>
                             <exclude reference="bZx-so-rgR"/>
                             <exclude reference="f3i-8J-vRL"/>
@@ -251,7 +321,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="244" y="132.5"/>
+            <point key="canvasLocation" x="227" y="80.5"/>
         </view>
         <swipeGestureRecognizer direction="right" id="khR-ua-jtn" userLabel="RightSwipe">
             <connections>

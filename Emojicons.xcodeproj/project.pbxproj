@@ -25,6 +25,7 @@
 		431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980919D4497A0047B810 /* EmojiCell.swift */; };
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
 		431B981819D955EE0047B810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981719D955EE0047B810 /* TitleView.swift */; };
+		431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981919DAB3EA0047B810 /* TabButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		431B980919D4497A0047B810 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		431B981219D595460047B810 /* EmojiCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionDataSource.swift; sourceTree = "<group>"; };
 		431B981719D955EE0047B810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		431B981919DAB3EA0047B810 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				431B980719D449250047B810 /* EmojiFlowLayout.swift */,
 				431B980919D4497A0047B810 /* EmojiCell.swift */,
 				431B981719D955EE0047B810 /* TitleView.swift */,
+				431B981919DAB3EA0047B810 /* TabButton.swift */,
 				431B97FC19D41AB20047B810 /* globe.png */,
 				431B97FE19D41B590047B810 /* history.png */,
 				431B980019D441E50047B810 /* star.png */,
@@ -358,6 +361,7 @@
 				431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */,
 				431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */,
 				431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */,
+				431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */,
 				431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */,
 				431B981819D955EE0047B810 /* TitleView.swift in Sources */,
 			);

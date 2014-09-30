@@ -16,6 +16,8 @@ enum KeyboardMode{
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
   
+  var currentTab = KeyboardMode.Normal
+  
   let emojiDataSource = EmojiCollectionDataSource()
   
   @IBOutlet var nextKeyboardButton: UIButton!
@@ -26,6 +28,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
   @IBOutlet weak var emojiconsModeButton: UIButton!
   @IBOutlet weak var favoritesModeButton: UIButton!
   @IBOutlet weak var historyModeButton: UIButton!
+  
+  @IBOutlet weak var titleViewHeightConstraint: NSLayoutConstraint!
   
   //MARK: - UIViewController
   
@@ -65,6 +69,13 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
   
   @IBAction func backspaceAction(sender: AnyObject) {
     (textDocumentProxy as UIKeyInput).deleteBackward()
+    titleView.hidden = !titleView.hidden
+    
+    if titleView.hidden{
+      titleViewHeightConstraint.constant = 0
+    }else{
+      titleViewHeightConstraint.constant = collectionView.bounds.height / CGFloat(8)
+    }
   }
   
   //MARK: - Private
