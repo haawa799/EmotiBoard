@@ -6,11 +6,15 @@
 	<dict>
 		<key>Emojicons-Keyboard.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 		<key>Emojicons.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -28,6 +32,16 @@
 			<true/>
 		</dict>
 		<key>431B97EA19D4144E0047B810</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43EE931E19DD69D800BAA1F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>43EE932819DD69D900BAA1F2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

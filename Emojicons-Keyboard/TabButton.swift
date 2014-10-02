@@ -8,16 +8,57 @@
 
 import UIKit
 
-class TabButton: UIView {
+protocol TabButtonDelegate{
+  func tabButtonTouchBegin(#tabButton: TabButton)
+  func tabButtonTouchEnded(#tabButton: TabButton)
+}
+
+@IBDesignable class TabButton: UIView {
+  
+  @IBInspectable var notSelectable:Bool = false
+  
+  var delegate: TabButtonDelegate?
+  
+  let selectedColor = UIColor.clearColor()
+  let notSelectedColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5)
+  
+  let specialNotSelected = UIColor(red: 0.1, green: 0.1, blue: 0.1, alpha: 0.5)
+  let specialSelected = UIColor.clearColor()
+  
+  @IBInspectable var isSelected:Bool = false{
+    didSet{
+      if notSelectable{
+        if isSelected{
+          backgroundView?.backgroundColor = specialSelected
+        }else{
+          backgroundView?.backgroundColor = specialNotSelected
+        }
+      }else{
+        if isSelected{
+          backgroundView?.backgroundColor = selectedColor
+        }else{
+          backgroundView?.backgroundColor = notSelectedColor
+        }
+      }
+    }
+  }
   
   @IBOutlet weak var backgroundView: UIView?
   
   override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-    backgroundView?.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.5)
+    if notSelectable == true{
+      isSelected = true
+    }else{
+      isSelected = !isSelected
+    }
+    delegate?.tabButtonTouchBegin(tabButton: self)
   }
   
   override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-    backgroundView?.backgroundColor = UIColor.clearColor()
+    if notSelectable == true{
+      isSelected = false
+    }
+    delegate?.tabButtonTouchEnded(tabButton: self)
   }
   
 }

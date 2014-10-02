@@ -8,35 +8,22 @@
 
 import UIKit
 
-enum KeyboardMode{
-  case Normal
-  case History
-  case Favorites
-}
-
-class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
+class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , TabBarProtocol {
   
   var currentTab = KeyboardMode.Normal
+  var isBackspacePressed = false
   
   let emojiDataSource = EmojiCollectionDataSource()
-  
-  @IBOutlet var nextKeyboardButton: UIButton!
-  
+
   @IBOutlet weak var titleView: TitleView!
   @IBOutlet weak var collectionView: UICollectionView!
-  
-  @IBOutlet weak var emojiconsModeButton: UIButton!
-  @IBOutlet weak var favoritesModeButton: UIButton!
-  @IBOutlet weak var historyModeButton: UIButton!
-  
+  @IBOutlet weak var tabBar: TabBar!
   @IBOutlet weak var titleViewHeightConstraint: NSLayoutConstraint!
   
   //MARK: - UIViewController
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
     
     let nib = UINib(nibName: "KeyboardView", bundle: nil)
     let objects = nib.instantiateWithOwner(self, options: nil)
@@ -46,6 +33,8 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     self.collectionView.registerClass(EmojiCell.self,forCellWithReuseIdentifier: "Emoji")
     self.collectionView.dataSource = emojiDataSource
     self.collectionView.delegate = self
+    
+    self.tabBar.delegate = self
     
     updateTitle()
   }
@@ -58,23 +47,6 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     if let proxy = self.textDocumentProxy as? UITextDocumentProxy
     {
       proxy.insertText(cell.label.text!)
-    }
-  }
-  
-  //MARK: - Actions
-  
-  @IBAction func nextKeyboard(sender: AnyObject) {
-    advanceToNextInputMode()
-  }
-  
-  @IBAction func backspaceAction(sender: AnyObject) {
-    (textDocumentProxy as UIKeyInput).deleteBackward()
-    titleView.hidden = !titleView.hidden
-    
-    if titleView.hidden{
-      titleViewHeightConstraint.constant = 0
-    }else{
-      titleViewHeightConstraint.constant = collectionView.bounds.height / CGFloat(8)
     }
   }
   
@@ -99,8 +71,25 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
   }
   
   private func reloadEmojes(){
-    collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.Top, animated: false)
+//    collectionView.scrollToItemAtIndexPath(NSIndexPath(forItem: 0, inSection: 0), atScrollPosition: UICollectionViewScrollPosition.Top, animated: false)
     collectionView!.reloadData()
+  }
+  
+  private func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+      dispatch_time(
+        DISPATCH_TIME_NOW,
+        Int64(delay * Double(NSEC_PER_SEC))
+      ),
+      dispatch_get_main_queue(), closure)
+  }
+  
+  private func showHideTilteBar(){
+    if titleView.hidden{
+      titleViewHeightConstraint.constant = 0
+    }else{
+      titleViewHeightConstraint.constant = collectionView.bounds.height / CGFloat(8)
+    }
   }
   
   //MARK: - Gestures
@@ -117,6 +106,39 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate {
     titleView.nextPage()
     updateTitle()
     reloadEmojes()
+  }
+  
+  //MARK: - TabBarProtocol
+  func backspacePressed(){
+    isBackspacePressed = true
+    backspaceDelete()
+  }
+  
+  func backspaceReleased(){
+    isBackspacePressed = false
+  }
+  
+  func nextKeyboardPressed(){
+    advanceToNextInputMode()
+  }
+  
+  func tabPressed(#mode:KeyboardMode){
+    switch (mode){
+    case .Normal:
+      titleView.hidden = false
+    default:
+      titleView.hidden = true
+    }
+    showHideTilteBar()
+  }
+  
+  func backspaceDelete(){
+    (textDocumentProxy as UIKeyInput).deleteBackward()
+    delay(0.3, closure: {
+      if self.isBackspacePressed{
+        self.backspaceDelete()
+      }
+    })
   }
   
 }

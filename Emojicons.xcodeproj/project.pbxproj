@@ -26,6 +26,11 @@
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
 		431B981819D955EE0047B810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981719D955EE0047B810 /* TitleView.swift */; };
 		431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981919DAB3EA0047B810 /* TabButton.swift */; };
+		431B982319DACF510047B810 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B982219DACF510047B810 /* TabBar.swift */; };
+		43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
+		43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
+		43EE935119DD7DBE00BAA1F2 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE935019DD7DBE00BAA1F2 /* Kaomoji.swift */; };
+		43EE935219DD7EC600BAA1F2 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EE935019DD7DBE00BAA1F2 /* Kaomoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43EE933A19DD69D900BAA1F2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +106,12 @@
 		431B981219D595460047B810 /* EmojiCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionDataSource.swift; sourceTree = "<group>"; };
 		431B981719D955EE0047B810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		431B981919DAB3EA0047B810 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		431B982219DACF510047B810 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		43EE931019DC09E200BAA1F2 /* Emojicons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Emojicons.entitlements; sourceTree = "<group>"; };
+		43EE931219DC0AC600BAA1F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Model.xcdatamodel; path = Emojicons/Model.xcdatamodeld/Model.xcdatamodel; sourceTree = SOURCE_ROOT; };
+		43EE931819DC2BC000BAA1F2 /* Emojicons-Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Emojicons-Keyboard.entitlements"; sourceTree = "<group>"; };
+		43EE935019DD7DBE00BAA1F2 /* Kaomoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kaomoji.swift; sourceTree = "<group>"; };
+		43EE935319DD801100BAA1F2 /* Emojicons-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Emojicons-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +162,12 @@
 		431B97C419D413A30047B810 /* Emojicons */ = {
 			isa = PBXGroup;
 			children = (
+				43EE935319DD801100BAA1F2 /* Emojicons-Bridging-Header.h */,
+				43EE935019DD7DBE00BAA1F2 /* Kaomoji.swift */,
+				43EE931019DC09E200BAA1F2 /* Emojicons.entitlements */,
 				431B97C719D413A30047B810 /* AppDelegate.swift */,
 				431B97C919D413A30047B810 /* ViewController.swift */,
+				43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */,
 				431B97CB19D413A30047B810 /* Main.storyboard */,
 				431B97CE19D413A30047B810 /* Images.xcassets */,
 				431B97D019D413A30047B810 /* LaunchScreen.xib */,
@@ -179,6 +204,7 @@
 		431B97EC19D4144E0047B810 /* Emojicons-Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				43EE931819DC2BC000BAA1F2 /* Emojicons-Keyboard.entitlements */,
 				431B97EF19D4144E0047B810 /* KeyboardViewController.swift */,
 				431B981219D595460047B810 /* EmojiCollectionDataSource.swift */,
 				431B97FA19D415AC0047B810 /* KeyboardView.xib */,
@@ -186,6 +212,7 @@
 				431B980919D4497A0047B810 /* EmojiCell.swift */,
 				431B981719D955EE0047B810 /* TitleView.swift */,
 				431B981919DAB3EA0047B810 /* TabButton.swift */,
+				431B982219DACF510047B810 /* TabBar.swift */,
 				431B97FC19D41AB20047B810 /* globe.png */,
 				431B97FE19D41B590047B810 /* history.png */,
 				431B980019D441E50047B810 /* star.png */,
@@ -215,6 +242,7 @@
 				431B97BF19D413A30047B810 /* Frameworks */,
 				431B97C019D413A30047B810 /* Resources */,
 				431B97F919D4144E0047B810 /* Embed App Extensions */,
+				43EE933A19DD69D900BAA1F2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,6 +301,12 @@
 				TargetAttributes = {
 					431B97C119D413A30047B810 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = S55BP53VB8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					431B97D619D413A30047B810 = {
 						CreatedOnToolsVersion = 6.0;
@@ -280,6 +314,12 @@
 					};
 					431B97EA19D4144E0047B810 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = S55BP53VB8;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -325,6 +365,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */,
 				431B980519D443290047B810 /* backspace.png in Resources */,
 				431B97FD19D41AB20047B810 /* globe.png in Resources */,
 				431B980119D441E50047B810 /* star.png in Resources */,
@@ -343,6 +384,8 @@
 			files = (
 				431B97CA19D413A30047B810 /* ViewController.swift in Sources */,
 				431B97C819D413A30047B810 /* AppDelegate.swift in Sources */,
+				43EE935119DD7DBE00BAA1F2 /* Kaomoji.swift in Sources */,
+				43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,10 +403,12 @@
 			files = (
 				431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */,
 				431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */,
+				43EE935219DD7EC600BAA1F2 /* Kaomoji.swift in Sources */,
 				431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */,
 				431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */,
 				431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */,
 				431B981819D955EE0047B810 /* TitleView.swift in Sources */,
+				431B982319DACF510047B810 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,9 +535,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Emojicons/Emojicons.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Emojicons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -500,9 +552,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Emojicons/Emojicons.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Emojicons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -543,6 +601,9 @@
 		431B97F719D4144E0047B810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Emojicons-Keyboard/Emojicons-Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -550,6 +611,7 @@
 				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -557,9 +619,13 @@
 		431B97F819D4144E0047B810 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Emojicons-Keyboard/Emojicons-Keyboard.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -604,6 +670,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43EE931219DC0AC600BAA1F2 /* Model.xcdatamodel */,
+			);
+			currentVersion = 43EE931219DC0AC600BAA1F2 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 431B97BA19D413A20047B810 /* Project object */;
 }
