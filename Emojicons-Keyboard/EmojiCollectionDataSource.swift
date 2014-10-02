@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import EmojiKit
 
 enum EmojiCategory: Int{
   case Angry = 0

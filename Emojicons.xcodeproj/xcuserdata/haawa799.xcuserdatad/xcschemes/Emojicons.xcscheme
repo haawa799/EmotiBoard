@@ -48,6 +48,20 @@
                ReferencedContainer = "container:Emojicons.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4332167919DDBAB600E3E9B9"
+               BuildableName = "EmojiKitTests.xctest"
+               BlueprintName = "EmojiKitTests"
+               ReferencedContainer = "container:Emojicons.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -73,6 +87,16 @@
                BlueprintIdentifier = "43EE932819DD69D900BAA1F2"
                BuildableName = "KaomojiKitTests.xctest"
                BlueprintName = "KaomojiKitTests"
+               ReferencedContainer = "container:Emojicons.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4332167919DDBAB600E3E9B9"
+               BuildableName = "EmojiKitTests.xctest"
+               BlueprintName = "EmojiKitTests"
                ReferencedContainer = "container:Emojicons.xcodeproj">
             </BuildableReference>
          </TestableReference>

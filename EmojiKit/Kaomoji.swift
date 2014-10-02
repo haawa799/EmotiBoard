@@ -9,14 +9,14 @@
 import UIKit
 import CoreData
 
-class Kaomoji: NSManagedObject {
+public class Kaomoji: NSManagedObject {
   
-  @NSManaged var text: String?
-  @NSManaged var date: NSDate?
-  @NSManaged var categoryIndex: Int16
-  @NSManaged var favorite: Bool
+  @NSManaged public var text: String?
+  @NSManaged public var date: NSDate?
+  @NSManaged public var categoryIndex: Int16
+  @NSManaged public var favorite: Bool
   
-  class func create(#context: NSManagedObjectContext, text: String, category: Int16){
+  public class func create(#context: NSManagedObjectContext, text: String, category: Int16){
     
     var kaomoji = Kaomoji(entity: NSEntityDescription.entityForName("Kaomoji", inManagedObjectContext: context)!, insertIntoManagedObjectContext: context)
     

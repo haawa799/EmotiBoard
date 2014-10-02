@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import EmojiKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
