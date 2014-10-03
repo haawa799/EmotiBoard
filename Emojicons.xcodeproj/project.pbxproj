@@ -33,6 +33,7 @@
 		4332168519DDBAB600E3E9B9 /* EmojiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */; };
 		4332169019DDBAFF00E3E9B9 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; };
+		43418B7819DEA1CC00052633 /* KaomojiCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */; };
 		43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
 		43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		4332167F19DDBAB600E3E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4332168019DDBAB600E3E9B9 /* EmojiKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKitTests.swift; sourceTree = "<group>"; };
 		4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kaomoji.swift; sourceTree = "<group>"; };
+		43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaomojiCoreDataManager.swift; sourceTree = "<group>"; };
 		43EE931019DC09E200BAA1F2 /* Emojicons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Emojicons.entitlements; sourceTree = "<group>"; };
 		43EE931219DC0AC600BAA1F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Model.xcdatamodel; path = Emojicons/Model.xcdatamodeld/Model.xcdatamodel; sourceTree = SOURCE_ROOT; };
 		43EE931819DC2BC000BAA1F2 /* Emojicons-Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Emojicons-Keyboard.entitlements"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */,
+				43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */,
 				4332167419DDBAB600E3E9B9 /* EmojiKit.h */,
 				4332167219DDBAB600E3E9B9 /* Supporting Files */,
 			);
@@ -574,6 +577,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */,
+				43418B7819DEA1CC00052633 /* KaomojiCoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +944,7 @@
 				4332168919DDBAB600E3E9B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4332168D19DDBAB600E3E9B9 /* Build configuration list for PBXNativeTarget "EmojiKitTests" */ = {
 			isa = XCConfigurationList;
@@ -948,6 +953,7 @@
 				4332168B19DDBAB600E3E9B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

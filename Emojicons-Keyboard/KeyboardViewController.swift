@@ -123,13 +123,19 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   }
   
   func tabPressed(#mode:KeyboardMode){
-    switch (mode){
-    case .Normal:
-      titleView.hidden = false
-    default:
-      titleView.hidden = true
+    
+    if mode != currentTab{
+      switch (mode){
+      case .Normal:
+        titleView.hidden = false
+      default:
+        titleView.hidden = true
+      }
+      currentTab = mode
+      showHideTilteBar()
+      self.emojiDataSource.tab = mode
+      collectionView.reloadData()
     }
-    showHideTilteBar()
   }
   
   func backspaceDelete(){

@@ -1,53 +1,56 @@
 //
-//  AppDelegate.swift
+//  KaomojiCoreDataManager.swift
 //  Emojicons
 //
-//  Created by Andrew K. on 9/25/14.
+//  Created by Andrew K. on 10/3/14.
 //  Copyright (c) 2014 Andrew K. All rights reserved.
 //
 
 import UIKit
 import CoreData
-import EmojiKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-  var window: UIWindow?
-
-
-  func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    // Override point for customization after application launch.
+public class KaomojiCoreDataManager {
+  
+  public class var sharedInstance : KaomojiCoreDataManager {
+  struct Static {
+    static var onceToken : dispatch_once_t = 0
+    static var instance : KaomojiCoreDataManager? = nil
+    }
+    dispatch_once(&Static.onceToken) {
+      Static.instance = KaomojiCoreDataManager()
+    }
+    return Static.instance!
+  }
+  
+  public func emojiconsForCategoryIndex(#categoryIndex: Int16) -> [Kaomoji]?{
+    let resultPredicate = NSPredicate(format: "categoryIndex == %i", categoryIndex)
+    return emojicons(resultPredicate, limit: nil)
+  }
+  
+  public func favoriteEmojicons() -> [Kaomoji]?{
+    let resultPredicate = NSPredicate(format: "favorite == %@", true)
+    return emojicons(resultPredicate, limit: nil)
+  }
+  
+  private func emojicons(predicate: NSPredicate?,limit: Int?) -> [Kaomoji]?{
+    
+    populateIfEmpty()
     
     var request = NSFetchRequest(entityName: "Kaomoji")
-    var results = self.managedObjectContext?.executeFetchRequest(request, error: nil)
-    
-    if results?.count == 0{
-      Kaomoji.create(context: managedObjectContext!, text: "( ´ ▽ ` )ﾉ", category: 0)
-      Kaomoji.create(context: managedObjectContext!, text: "(*´・ｖ・)", category: 0)
-      Kaomoji.create(context: managedObjectContext!, text: "(★^O^★)", category: 0)
-      Kaomoji.create(context: managedObjectContext!, text: "〜(￣▽￣〜)", category: 0)
-      Kaomoji.create(context: managedObjectContext!, text: "（＿´ω｀）", category: 0)
-      Kaomoji.create(context: managedObjectContext!, text: "(￣(エ)￣)ゞ", category: 1)
-      Kaomoji.create(context: managedObjectContext!, text: "【・ヘ・?】", category: 1)
-      Kaomoji.create(context: managedObjectContext!, text: "ఠ_ఠ", category: 1)
-      Kaomoji.create(context: managedObjectContext!, text: "(ノಠ益ಠ)ノ彡┻━┻", category: 2)
-      Kaomoji.create(context: managedObjectContext!, text: "ლ(ಠ益ಠ)ლ", category: 2)
-    }else{
-      var kao: Kaomoji = results![0] as Kaomoji
-      println(kao.text!)
+    if let predicate = predicate{
+      request.predicate = predicate
+    }
+    if let limit = limit{
+      request.fetchLimit = limit
     }
     
-    return true
+    var results = self.managedObjectContext?.executeFetchRequest(request, error: nil)
+    return results as? Array<Kaomoji>
   }
-
-
-  func applicationWillTerminate(application: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    self.saveContext()
-  }
-
   
+  private func populateIfEmpty(){
+    
+  }
   
   
   // MARK: - Core Data stack
@@ -69,7 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Create the coordinator and store
     var coordinator: NSPersistentStoreCoordinator? = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
     var directory = NSFileManager.defaultManager().containerURLForSecurityApplicationGroupIdentifier("group.Emojicons")
-    let url = directory?.URLByAppendingPathComponent("Model.sqlite")
+    var urlString = directory!.absoluteString!
+    urlString = urlString + "Model.sqlite"
+    let url = NSURL(string: urlString)
     var error: NSError? = nil
     var failureReason = "There was an error creating or loading the application's saved data."
     if coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil, error: &error) == nil {
@@ -114,6 +119,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
   }
   
-
 }
-
