@@ -10,24 +10,33 @@ import UIKit
 import EmojiKit
 
 enum EmojiCategory: Int{
-  case Angry = 0
-  case Happy = 1
-  case Sad = 2
-  case WTF = 3
-  case Smile = 4
+  case HappyLol = 0
+  case LoveCute = 1
+  case Angry = 2
+  case Surprised = 3
+  case Animals = 4
+  case Sad = 5
+  case NoYes = 6
+  case Other = 7
   
   func description() -> String{
     switch (self){
+    case .HappyLol :
+      return "Happy/Lol"
+    case .LoveCute :
+      return "Love/Cute"
     case .Angry :
       return "Angry"
-    case .Happy :
-      return "Happy"
+    case .Surprised :
+      return "Surprised"
+    case .Animals :
+      return "Animals"
     case .Sad :
       return "Sad"
-    case .WTF :
-      return "WTF"
-    case .Smile :
-      return "Smile"
+    case .NoYes :
+      return "Yes/No"
+    case .Other :
+      return "Other"
     }
   }
   
@@ -45,7 +54,7 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   
   let reuseIdentifier = "Emoji"
   
-  var category:EmojiCategory = .Angry{
+  var category:EmojiCategory = .HappyLol{
     didSet{
       reloadKaomojisFromCoreData()
     }
@@ -79,23 +88,21 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
     
     if let kaomojis = kaomojis{
       var kaomoji = kaomojis[indexPath.item] as Kaomoji
-      text = kaomoji.text!
+      cell.kaomoji = kaomoji
     }
-    
-    cell.label.text = text
     
     return cell as UICollectionViewCell
   }
   
   func nextCategory() -> String{
-    if category.toRaw() < EmojiCategory.Smile.toRaw(){
+    if category.toRaw() < EmojiCategory.Other.toRaw(){
       category = EmojiCategory.fromRaw(category.toRaw()+1)!
     }
     return category.description()
   }
   
   func previousCategory() -> String{
-    if category.toRaw() > EmojiCategory.Angry.toRaw(){
+    if category.toRaw() > EmojiCategory.HappyLol.toRaw(){
       category = EmojiCategory.fromRaw(category.toRaw()-1)!
     }
     return category.description()
@@ -108,6 +115,8 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
       kaomojis = KaomojiCoreDataManager.sharedInstance.emojiconsForCategoryIndex(categoryIndex: Int16(category.toRaw()))!
     }else if tab == KeyboardMode.Favorites{
       kaomojis = KaomojiCoreDataManager.sharedInstance.favoriteEmojicons()!
+    }else if tab == KeyboardMode.History{
+      kaomojis = KaomojiCoreDataManager.sharedInstance.recentEmojicons()!
     }
     
   }

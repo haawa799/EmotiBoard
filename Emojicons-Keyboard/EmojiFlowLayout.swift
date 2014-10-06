@@ -29,13 +29,9 @@ class EmojiFlowLayout: UICollectionViewFlowLayout {
     
     columns = Int(Float(self.collectionView!.bounds.size.width) / optimalWidth)
     rows = Int(Float(self.collectionView!.bounds.size.height) / optimalHeight)
-    println("columns:\(columns)")
-    println("rows::\(rows)")
     actualWidth = Float(self.collectionView!.bounds.size.width
       - CGFloat(columns)*CGFloat(minItemSpace) - CGFloat(minItemSpace)*2.0) / Float(columns)
     actualHeight = Float(self.collectionView!.bounds.size.height - CGFloat(rows)*CGFloat(minLineSpace) - CGFloat(minLineSpace)*2.0) / Float(rows)
-    println("width:\(actualWidth)")
-    println("height:\(actualHeight)")
     
     self.minimumInteritemSpacing = CGFloat(minItemSpace)
     self.minimumLineSpacing = CGFloat(minLineSpace)

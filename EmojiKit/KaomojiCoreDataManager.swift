@@ -24,15 +24,21 @@ public class KaomojiCoreDataManager {
   
   public func emojiconsForCategoryIndex(#categoryIndex: Int16) -> [Kaomoji]?{
     let resultPredicate = NSPredicate(format: "categoryIndex == %i", categoryIndex)
-    return emojicons(resultPredicate, limit: nil)
+    return emojicons(resultPredicate, limit: nil, sortDescriptor: nil)
   }
   
   public func favoriteEmojicons() -> [Kaomoji]?{
     let resultPredicate = NSPredicate(format: "favorite == %@", true)
-    return emojicons(resultPredicate, limit: nil)
+    return emojicons(resultPredicate, limit: nil, sortDescriptor: nil)
   }
   
-  private func emojicons(predicate: NSPredicate?,limit: Int?) -> [Kaomoji]?{
+  public func recentEmojicons() -> [Kaomoji]?{
+    let resultPredicate = NSPredicate(format: "date != NULL", argumentArray: nil)
+    let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+    return emojicons(resultPredicate, limit: 20, sortDescriptor: sortDescriptor)
+  }
+  
+  private func emojicons(predicate: NSPredicate?, limit: Int? ,sortDescriptor: NSSortDescriptor?) -> [Kaomoji]?{
     
     populateIfEmpty()
     
@@ -42,6 +48,9 @@ public class KaomojiCoreDataManager {
     }
     if let limit = limit{
       request.fetchLimit = limit
+    }
+    if let sortDescriptor = sortDescriptor{
+      request.sortDescriptors = [sortDescriptor]
     }
     
     var results = self.managedObjectContext?.executeFetchRequest(request, error: nil)
@@ -94,7 +103,7 @@ public class KaomojiCoreDataManager {
     return coordinator
     }()
   
-  lazy var managedObjectContext: NSManagedObjectContext? = {
+  public lazy var managedObjectContext: NSManagedObjectContext? = {
     // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
     let coordinator = self.persistentStoreCoordinator
     if coordinator == nil {

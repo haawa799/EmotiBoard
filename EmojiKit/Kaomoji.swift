@@ -27,4 +27,9 @@ public class Kaomoji: NSManagedObject {
     context.save(nil)
   }
   
+  public func changeFavoriteState(#context: NSManagedObjectContext){
+    self.favorite = !self.favorite;
+    context.save(nil)
+  }
+  
 }

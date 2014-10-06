@@ -28,14 +28,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       Kaomoji.create(context: managedObjectContext!, text: "(★^O^★)", category: 0)
       Kaomoji.create(context: managedObjectContext!, text: "〜(￣▽￣〜)", category: 0)
       Kaomoji.create(context: managedObjectContext!, text: "（＿´ω｀）", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "( ´ ▽ ` )ﾉ", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "(*´・ｖ・)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "(★^O^★)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "〜(￣▽￣〜)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "（＿´ω｀）", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "( ´ ▽ ` )ﾉ", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "(*´・ｖ・)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "(★^O^★)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "〜(￣▽￣〜)", category: 0)
+      Kaomoji.create(context: managedObjectContext!, text: "（＿´ω｀）", category: 0)
       Kaomoji.create(context: managedObjectContext!, text: "(￣(エ)￣)ゞ", category: 1)
       Kaomoji.create(context: managedObjectContext!, text: "【・ヘ・?】", category: 1)
       Kaomoji.create(context: managedObjectContext!, text: "ఠ_ఠ", category: 1)
       Kaomoji.create(context: managedObjectContext!, text: "(ノಠ益ಠ)ノ彡┻━┻", category: 2)
       Kaomoji.create(context: managedObjectContext!, text: "ლ(ಠ益ಠ)ლ", category: 2)
-    }else{
-      var kao: Kaomoji = results![0] as Kaomoji
-      println(kao.text!)
     }
     
     return true

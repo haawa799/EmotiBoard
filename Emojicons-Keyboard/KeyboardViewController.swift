@@ -47,6 +47,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
     if let proxy = self.textDocumentProxy as? UITextDocumentProxy
     {
       proxy.insertText(cell.label.text!)
+      cell.kaomoji?.date = NSDate()
     }
   }
   

@@ -224,7 +224,7 @@
                                     </connections>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="0.34000000000000002" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.35000000000000003" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="T6F-Tv-ODS" secondAttribute="bottom" id="3pV-yC-mSP"/>
                                 <constraint firstAttribute="bottom" secondItem="4Ti-MF-KlB" secondAttribute="bottom" id="3yq-ap-hjr"/>
@@ -275,28 +275,27 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-qc-8GD" userLabel="TitleView" customClass="TitleView" customModule="Emojicons_Keyboard" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="378" height="26"/>
                             <subviews>
-                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-dm-vIL">
-                                    <rect key="frame" x="283" y="-6" width="87" height="37"/>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-dm-vIL">
+                                    <rect key="frame" x="249" y="-6" width="121" height="37"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="87" id="a8l-9l-0YP"/>
-                                        <constraint firstAttribute="height" constant="37" id="r9q-bC-tiC"/>
+                                        <constraint firstAttribute="width" constant="121" id="HQI-VQ-DBk"/>
                                     </constraints>
                                 </pageControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-1z-1Pb">
-                                    <rect key="frame" x="8" y="0.0" width="275" height="26"/>
+                                    <rect key="frame" x="8" y="0.0" width="241" height="26"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="Z9S-1z-1Pb" firstAttribute="top" secondItem="hRP-qc-8GD" secondAttribute="top" id="0KN-gW-0MQ"/>
-                                <constraint firstAttribute="centerY" secondItem="lRT-dm-vIL" secondAttribute="centerY" id="dDL-Fz-GmR"/>
+                                <constraint firstItem="lRT-dm-vIL" firstAttribute="leading" secondItem="Z9S-1z-1Pb" secondAttribute="trailing" id="CJi-pt-0kh"/>
+                                <constraint firstAttribute="trailing" secondItem="lRT-dm-vIL" secondAttribute="trailing" constant="8" id="XSA-Ij-ncL"/>
+                                <constraint firstAttribute="centerY" secondItem="lRT-dm-vIL" secondAttribute="centerY" id="iCh-iy-vT3"/>
                                 <constraint firstAttribute="bottom" secondItem="Z9S-1z-1Pb" secondAttribute="bottom" id="l2Z-MJ-eJY"/>
                                 <constraint firstItem="Z9S-1z-1Pb" firstAttribute="leading" secondItem="hRP-qc-8GD" secondAttribute="leading" constant="8" id="mBX-Hk-4OR"/>
-                                <constraint firstAttribute="trailing" secondItem="lRT-dm-vIL" secondAttribute="trailing" constant="8" id="pCb-hk-8zX"/>
-                                <constraint firstItem="lRT-dm-vIL" firstAttribute="leading" secondItem="Z9S-1z-1Pb" secondAttribute="trailing" id="qnY-Qg-W60"/>
                                 <constraint firstAttribute="height" constant="26" id="tKk-We-va8"/>
                             </constraints>
                             <connections>
@@ -305,7 +304,7 @@
                             </connections>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.4941176471" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="0.67000000000000004" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="hRP-qc-8GD" firstAttribute="top" secondItem="Lhk-WA-4sr" secondAttribute="top" id="445-GP-e7y"/>
                         <constraint firstItem="hRP-qc-8GD" firstAttribute="leading" secondItem="Lhk-WA-4sr" secondAttribute="leading" id="Fvo-aU-Qa3"/>

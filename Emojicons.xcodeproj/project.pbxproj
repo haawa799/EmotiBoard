@@ -16,11 +16,6 @@
 		431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97EF19D4144E0047B810 /* KeyboardViewController.swift */; };
 		431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FA19D415AC0047B810 /* KeyboardView.xib */; };
-		431B97FD19D41AB20047B810 /* globe.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FC19D41AB20047B810 /* globe.png */; };
-		431B97FF19D41B590047B810 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FE19D41B590047B810 /* history.png */; };
-		431B980119D441E50047B810 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980019D441E50047B810 /* star.png */; };
-		431B980319D442AC0047B810 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980219D442AC0047B810 /* smiley.png */; };
-		431B980519D443290047B810 /* backspace.png in Resources */ = {isa = PBXBuildFile; fileRef = 431B980419D443290047B810 /* backspace.png */; };
 		431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980719D449250047B810 /* EmojiFlowLayout.swift */; };
 		431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980919D4497A0047B810 /* EmojiCell.swift */; };
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
@@ -33,6 +28,7 @@
 		4332168519DDBAB600E3E9B9 /* EmojiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */; };
 		4332169019DDBAFF00E3E9B9 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; };
+		433AAE2719E187AF0084B67C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B97CE19D413A30047B810 /* Images.xcassets */; };
 		43418B7819DEA1CC00052633 /* KaomojiCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */; };
 		43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
 		43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
@@ -123,11 +119,6 @@
 		431B97EE19D4144E0047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97EF19D4144E0047B810 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		431B97FA19D415AC0047B810 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
-		431B97FC19D41AB20047B810 /* globe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = globe.png; sourceTree = "<group>"; };
-		431B97FE19D41B590047B810 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
-		431B980019D441E50047B810 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		431B980219D442AC0047B810 /* smiley.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smiley.png; sourceTree = "<group>"; };
-		431B980419D443290047B810 /* backspace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backspace.png; sourceTree = "<group>"; };
 		431B980719D449250047B810 /* EmojiFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlowLayout.swift; sourceTree = "<group>"; };
 		431B980919D4497A0047B810 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		431B981219D595460047B810 /* EmojiCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionDataSource.swift; sourceTree = "<group>"; };
@@ -266,11 +257,6 @@
 				431B981719D955EE0047B810 /* TitleView.swift */,
 				431B981919DAB3EA0047B810 /* TabButton.swift */,
 				431B982219DACF510047B810 /* TabBar.swift */,
-				431B97FC19D41AB20047B810 /* globe.png */,
-				431B97FE19D41B590047B810 /* history.png */,
-				431B980019D441E50047B810 /* star.png */,
-				431B980219D442AC0047B810 /* smiley.png */,
-				431B980419D443290047B810 /* backspace.png */,
 				431B97ED19D4144E0047B810 /* Supporting Files */,
 			);
 			path = "Emojicons-Keyboard";
@@ -514,12 +500,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */,
-				431B980519D443290047B810 /* backspace.png in Resources */,
-				431B97FD19D41AB20047B810 /* globe.png in Resources */,
-				431B980119D441E50047B810 /* star.png in Resources */,
-				431B97FF19D41B590047B810 /* history.png in Resources */,
+				433AAE2719E187AF0084B67C /* Images.xcassets in Resources */,
 				431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */,
-				431B980319D442AC0047B810 /* smiley.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
