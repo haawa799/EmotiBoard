@@ -16,8 +16,8 @@ class EmojiCell: UICollectionViewCell {
   var kaomoji: Kaomoji?{
     didSet{
       if let kaomoji = kaomoji{
-        label.text = kaomoji.text
-        showHideFavoriteView()
+//        label.text = kaomoji.text
+//        showHideFavoriteView()
       }
     }
   }
@@ -35,13 +35,14 @@ class EmojiCell: UICollectionViewCell {
   
   func loadView()
   {
+    self.layer.masksToBounds = true
+    
     self.backgroundColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.4)
     
     label.numberOfLines = 1
     label.adjustsFontSizeToFitWidth = true
     label.setTranslatesAutoresizingMaskIntoConstraints(false)
     label.textAlignment = NSTextAlignment.Center
-    //        label.textColor = UIColor.whiteColor()
     self.addSubview(label)
     
     //
@@ -50,14 +51,14 @@ class EmojiCell: UICollectionViewCell {
     
     favoriteImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
     self.addSubview(favoriteImageView)
-  }
-  
-  
-  override func layoutSubviews()
-  {
+    
+    
+    ///
+    
+    
     var viewsDict = ["label":label]
     
-    var horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[label]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views:viewsDict)
+    var horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-2-[label]-2-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views:viewsDict)
     var verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[label]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views:viewsDict)
     //
     var heightProportion = NSLayoutConstraint(item: favoriteImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Height, multiplier: 0.6, constant: 0.0)
@@ -70,6 +71,25 @@ class EmojiCell: UICollectionViewCell {
     self.addConstraints(horizontalConstraints)
     self.addConstraints(verticalConstraints)
   }
+  
+  
+//  override func layoutSubviews()
+//  {
+//    var viewsDict = ["label":label]
+//    
+//    var horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-0-[label]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views:viewsDict)
+//    var verticalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|-0-[label]-0-|", options: NSLayoutFormatOptions.DirectionLeadingToTrailing, metrics: nil, views:viewsDict)
+//    //
+//    var heightProportion = NSLayoutConstraint(item: favoriteImageView, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Height, multiplier: 0.6, constant: 0.0)
+//    var widthProportion = NSLayoutConstraint(item: favoriteImageView, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: favoriteImageView, attribute: NSLayoutAttribute.Height, multiplier: 1, constant: 0.0)
+//    var topMargin = NSLayoutConstraint(item: favoriteImageView, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: 0.0)
+//    var rightMargin = NSLayoutConstraint(item: favoriteImageView, attribute: NSLayoutAttribute.Right, relatedBy: NSLayoutRelation.Equal, toItem: self, attribute: NSLayoutAttribute.Right, multiplier: 1, constant: 0.0)
+//    
+//    self.addConstraints([heightProportion,widthProportion,topMargin,rightMargin])
+//    //
+//    self.addConstraints(horizontalConstraints)
+//    self.addConstraints(verticalConstraints)
+//  }
   
   func longPress(gesture: UILongPressGestureRecognizer){
     if gesture.state == UIGestureRecognizerState.Ended{

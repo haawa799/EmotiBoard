@@ -17,11 +17,8 @@
 		431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FA19D415AC0047B810 /* KeyboardView.xib */; };
 		431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980719D449250047B810 /* EmojiFlowLayout.swift */; };
-		431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980919D4497A0047B810 /* EmojiCell.swift */; };
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
 		431B981819D955EE0047B810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981719D955EE0047B810 /* TitleView.swift */; };
-		431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981919DAB3EA0047B810 /* TabButton.swift */; };
-		431B982319DACF510047B810 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B982219DACF510047B810 /* TabBar.swift */; };
 		4332167519DDBAB600E3E9B9 /* EmojiKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4332167419DDBAB600E3E9B9 /* EmojiKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4332168119DDBAB600E3E9B9 /* EmojiKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168019DDBAB600E3E9B9 /* EmojiKitTests.swift */; };
 		4332168419DDBAB600E3E9B9 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; };
@@ -29,7 +26,23 @@
 		4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */; };
 		4332169019DDBAFF00E3E9B9 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; };
 		433AAE2719E187AF0084B67C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B97CE19D413A30047B810 /* Images.xcassets */; };
+		433AAE2E19E2A6060084B67C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE2C19E2A6060084B67C /* TabBar.swift */; };
+		433AAE2F19E2A6060084B67C /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE2D19E2A6060084B67C /* TabButton.swift */; };
 		43418B7819DEA1CC00052633 /* KaomojiCoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */; };
+		4376F98F19EFF548001CC1A7 /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376F98D19EFF548001CC1A7 /* EmojiCollectionViewCell.swift */; };
+		4376F99019EFF548001CC1A7 /* EmojiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4376F98E19EFF548001CC1A7 /* EmojiCollectionViewCell.xib */; };
+		438C120019EE9AF500B8A2FF /* allKao.json in Resources */ = {isa = PBXBuildFile; fileRef = 438C11FF19EE9AF500B8A2FF /* allKao.json */; };
+		438C120119EE9AF500B8A2FF /* allKao.json in Resources */ = {isa = PBXBuildFile; fileRef = 438C11FF19EE9AF500B8A2FF /* allKao.json */; };
+		438C120219EE9AF500B8A2FF /* allKao.json in Resources */ = {isa = PBXBuildFile; fileRef = 438C11FF19EE9AF500B8A2FF /* allKao.json */; };
+		43DE5AD119E2B53E00F5544D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3019E2AA720084B67C /* TableViewController.swift */; };
+		43DE5AD219E2B53E00F5544D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3419E2AAB90084B67C /* TableViewCell.swift */; };
+		43DE5AD419E2B53E00F5544D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433AAE3519E2AAB90084B67C /* TableViewCell.xib */; };
+		43DE5ADB19E2B80F00F5544D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3019E2AA720084B67C /* TableViewController.swift */; };
+		43DE5ADC19E2B80F00F5544D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3419E2AAB90084B67C /* TableViewCell.swift */; };
+		43DE5ADD19E2B80F00F5544D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433AAE3519E2AAB90084B67C /* TableViewCell.xib */; };
+		43DE5ADE19E2CE4400F5544D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3019E2AA720084B67C /* TableViewController.swift */; };
+		43DE5ADF19E2CE4400F5544D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433AAE3419E2AAB90084B67C /* TableViewCell.swift */; };
+		43DE5AE019E2CE4400F5544D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433AAE3519E2AAB90084B67C /* TableViewCell.xib */; };
 		43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
 		43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 43EE931119DC0AC600BAA1F2 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -120,11 +133,8 @@
 		431B97EF19D4144E0047B810 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		431B97FA19D415AC0047B810 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
 		431B980719D449250047B810 /* EmojiFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiFlowLayout.swift; sourceTree = "<group>"; };
-		431B980919D4497A0047B810 /* EmojiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCell.swift; sourceTree = "<group>"; };
 		431B981219D595460047B810 /* EmojiCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionDataSource.swift; sourceTree = "<group>"; };
 		431B981719D955EE0047B810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		431B981919DAB3EA0047B810 /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
-		431B982219DACF510047B810 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		4332167019DDBAB600E3E9B9 /* EmojiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmojiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4332167319DDBAB600E3E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4332167419DDBAB600E3E9B9 /* EmojiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmojiKit.h; sourceTree = "<group>"; };
@@ -132,7 +142,15 @@
 		4332167F19DDBAB600E3E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4332168019DDBAB600E3E9B9 /* EmojiKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKitTests.swift; sourceTree = "<group>"; };
 		4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kaomoji.swift; sourceTree = "<group>"; };
+		433AAE2C19E2A6060084B67C /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		433AAE2D19E2A6060084B67C /* TabButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		433AAE3019E2AA720084B67C /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = EmojiKit/TableViewController.swift; sourceTree = SOURCE_ROOT; };
+		433AAE3419E2AAB90084B67C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		433AAE3519E2AAB90084B67C /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaomojiCoreDataManager.swift; sourceTree = "<group>"; };
+		4376F98D19EFF548001CC1A7 /* EmojiCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiCollectionViewCell.swift; sourceTree = "<group>"; };
+		4376F98E19EFF548001CC1A7 /* EmojiCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmojiCollectionViewCell.xib; sourceTree = "<group>"; };
+		438C11FF19EE9AF500B8A2FF /* allKao.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = allKao.json; sourceTree = "<group>"; };
 		43EE931019DC09E200BAA1F2 /* Emojicons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Emojicons.entitlements; sourceTree = "<group>"; };
 		43EE931219DC0AC600BAA1F2 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = Model.xcdatamodel; path = Emojicons/Model.xcdatamodeld/Model.xcdatamodel; sourceTree = SOURCE_ROOT; };
 		43EE931819DC2BC000BAA1F2 /* Emojicons-Keyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Emojicons-Keyboard.entitlements"; sourceTree = "<group>"; };
@@ -248,15 +266,16 @@
 		431B97EC19D4144E0047B810 /* Emojicons-Keyboard */ = {
 			isa = PBXGroup;
 			children = (
+				433AAE2C19E2A6060084B67C /* TabBar.swift */,
+				433AAE2D19E2A6060084B67C /* TabButton.swift */,
 				43EE931819DC2BC000BAA1F2 /* Emojicons-Keyboard.entitlements */,
 				431B97EF19D4144E0047B810 /* KeyboardViewController.swift */,
 				431B981219D595460047B810 /* EmojiCollectionDataSource.swift */,
 				431B97FA19D415AC0047B810 /* KeyboardView.xib */,
 				431B980719D449250047B810 /* EmojiFlowLayout.swift */,
-				431B980919D4497A0047B810 /* EmojiCell.swift */,
+				4376F98D19EFF548001CC1A7 /* EmojiCollectionViewCell.swift */,
+				4376F98E19EFF548001CC1A7 /* EmojiCollectionViewCell.xib */,
 				431B981719D955EE0047B810 /* TitleView.swift */,
-				431B981919DAB3EA0047B810 /* TabButton.swift */,
-				431B982219DACF510047B810 /* TabBar.swift */,
 				431B97ED19D4144E0047B810 /* Supporting Files */,
 			);
 			path = "Emojicons-Keyboard";
@@ -273,6 +292,10 @@
 		4332167119DDBAB600E3E9B9 /* EmojiKit */ = {
 			isa = PBXGroup;
 			children = (
+				438C11FF19EE9AF500B8A2FF /* allKao.json */,
+				433AAE3019E2AA720084B67C /* TableViewController.swift */,
+				433AAE3419E2AAB90084B67C /* TableViewCell.swift */,
+				433AAE3519E2AAB90084B67C /* TableViewCell.xib */,
 				4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */,
 				43418B7719DEA1CC00052633 /* KaomojiCoreDataManager.swift */,
 				4332167419DDBAB600E3E9B9 /* EmojiKit.h */,
@@ -483,6 +506,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				431B97CD19D413A30047B810 /* Main.storyboard in Resources */,
+				438C120019EE9AF500B8A2FF /* allKao.json in Resources */,
+				43DE5ADD19E2B80F00F5544D /* TableViewCell.xib in Resources */,
 				431B97D219D413A30047B810 /* LaunchScreen.xib in Resources */,
 				431B97CF19D413A30047B810 /* Images.xcassets in Resources */,
 			);
@@ -500,6 +525,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				43EE931419DC0B2800BAA1F2 /* Model.xcdatamodeld in Resources */,
+				438C120119EE9AF500B8A2FF /* allKao.json in Resources */,
+				43DE5AE019E2CE4400F5544D /* TableViewCell.xib in Resources */,
+				4376F99019EFF548001CC1A7 /* EmojiCollectionViewCell.xib in Resources */,
 				433AAE2719E187AF0084B67C /* Images.xcassets in Resources */,
 				431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */,
 			);
@@ -509,6 +537,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DE5AD419E2B53E00F5544D /* TableViewCell.xib in Resources */,
+				438C120219EE9AF500B8A2FF /* allKao.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,9 +556,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DE5ADC19E2B80F00F5544D /* TableViewCell.swift in Sources */,
 				431B97CA19D413A30047B810 /* ViewController.swift in Sources */,
 				431B97C819D413A30047B810 /* AppDelegate.swift in Sources */,
 				43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */,
+				43DE5ADB19E2B80F00F5544D /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,13 +576,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431B980A19D4497A0047B810 /* EmojiCell.swift in Sources */,
 				431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */,
 				431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */,
-				431B981A19DAB3EA0047B810 /* TabButton.swift in Sources */,
+				43DE5ADF19E2CE4400F5544D /* TableViewCell.swift in Sources */,
+				43DE5ADE19E2CE4400F5544D /* TableViewController.swift in Sources */,
+				433AAE2E19E2A6060084B67C /* TabBar.swift in Sources */,
 				431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */,
+				4376F98F19EFF548001CC1A7 /* EmojiCollectionViewCell.swift in Sources */,
 				431B981819D955EE0047B810 /* TitleView.swift in Sources */,
-				431B982319DACF510047B810 /* TabBar.swift in Sources */,
+				433AAE2F19E2A6060084B67C /* TabButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +593,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */,
+				43DE5AD219E2B53E00F5544D /* TableViewCell.swift in Sources */,
+				43DE5AD119E2B53E00F5544D /* TableViewController.swift in Sources */,
 				43418B7819DEA1CC00052633 /* KaomojiCoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,6 +755,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -735,6 +772,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

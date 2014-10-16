@@ -59,6 +59,35 @@ public class KaomojiCoreDataManager {
   
   private func populateIfEmpty(){
     
+    var request = NSFetchRequest(entityName: "Kaomoji")
+    var results = self.managedObjectContext?.executeFetchRequest(request, error: nil)
+    
+    if results?.count == 0{
+      
+      var start = NSDate()
+      
+      let path = NSBundle.mainBundle().pathForResource("allKao", ofType: "json")
+      var possibleContent = String.stringWithContentsOfFile(path!, encoding: NSUTF8StringEncoding, error: nil)
+      
+      if let content = possibleContent {
+        var array = content.componentsSeparatedByString("\n")
+        
+        var c = 0
+        
+        for line in array{
+          var parts = line.componentsSeparatedByString("AND")
+          var text = parts.first!
+          var subcategoryText = parts.last!
+          var subcategory: Int16 = Int16(subcategoryText.toInt()!)
+          Kaomoji.create(context: self.managedObjectContext!, text: text, oldCategory: subcategory)
+          c++
+        }
+      }
+      
+      var end = NSDate()
+      var elapsed = end.timeIntervalSinceDate(start)
+      println("elapsed: \(elapsed)")
+    }
   }
   
   

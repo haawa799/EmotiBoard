@@ -42,9 +42,14 @@ enum EmojiCategory: Int{
   
 }
 
+protocol EmojiCollectionDataSourceDelegate{
+  func favoritesRefreshed(#empty: Bool)
+}
+
 class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   
   var kaomojis:[Kaomoji]?
+  var delegate: EmojiCollectionDataSourceDelegate?
   
   var tab: KeyboardMode = .Normal{
     didSet{
@@ -82,13 +87,10 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
   {
-    var cell: EmojiCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EmojiCell
-    
-    var text = ""
+    var cell: EmojiCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EmojiCollectionViewCell
     
     if let kaomojis = kaomojis{
-      var kaomoji = kaomojis[indexPath.item] as Kaomoji
-      cell.kaomoji = kaomoji
+      cell.kaomoji = kaomojis[indexPath.item]
     }
     
     return cell as UICollectionViewCell
@@ -115,6 +117,7 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
       kaomojis = KaomojiCoreDataManager.sharedInstance.emojiconsForCategoryIndex(categoryIndex: Int16(category.toRaw()))!
     }else if tab == KeyboardMode.Favorites{
       kaomojis = KaomojiCoreDataManager.sharedInstance.favoriteEmojicons()!
+      self.delegate?.favoritesRefreshed(empty: kaomojis?.count == 0)
     }else if tab == KeyboardMode.History{
       kaomojis = KaomojiCoreDataManager.sharedInstance.recentEmojicons()!
     }

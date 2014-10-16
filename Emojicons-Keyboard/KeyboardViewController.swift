@@ -8,13 +8,15 @@
 
 import UIKit
 
-class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , TabBarProtocol {
+class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , TabBarProtocol, EmojiCollectionDataSourceDelegate {
   
   var currentTab = KeyboardMode.Normal
   var isBackspacePressed = false
   
   let emojiDataSource = EmojiCollectionDataSource()
-
+  
+  @IBOutlet weak var noFavorites: UILabel!
+  @IBOutlet weak var fullAccessView: UIView!
   @IBOutlet weak var titleView: TitleView!
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var tabBar: TabBar!
@@ -25,25 +27,39 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    emojiDataSource.delegate = self
+    
+    var hasFullAccess = isOpenAccessGranted()
+    
     let nib = UINib(nibName: "KeyboardView", bundle: nil)
     let objects = nib.instantiateWithOwner(self, options: nil)
     let containerView = objects[0] as UIView
     view = containerView
     
-    self.collectionView.registerClass(EmojiCell.self,forCellWithReuseIdentifier: "Emoji")
-    self.collectionView.dataSource = emojiDataSource
-    self.collectionView.delegate = self
-    
-    self.tabBar.delegate = self
-    
-    updateTitle()
+    if hasFullAccess{
+      
+//      self.collectionView.registerClass(EmojiCell.self,forCellWithReuseIdentifier: "Emoji")
+      self.collectionView.registerNib(UINib(nibName: "EmojiCollectionViewCell",bundle: nil),forCellWithReuseIdentifier: "Emoji")
+      self.collectionView.dataSource = emojiDataSource
+      self.collectionView.delegate = self
+      
+      self.tabBar.delegate = self
+      
+      updateTitle()
+      self.emojiDataSource.tab = currentTab
+      collectionView.reloadData()
+      fullAccessView.hidden = true
+    }else{
+      fullAccessView.hidden = false
+//      view.userInteractionEnabled = false
+    }
   }
   
   //MARK: - UICollectionViewDelegate
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     //
-    let cell = collectionView.cellForItemAtIndexPath(indexPath) as EmojiCell
+    let cell = collectionView.cellForItemAtIndexPath(indexPath) as EmojiCollectionViewCell
     if let proxy = self.textDocumentProxy as? UITextDocumentProxy
     {
       proxy.insertText(cell.label.text!)
@@ -54,6 +70,20 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   //MARK: - Private
   
   private func hideUnhideTopBar(){
+  }
+  
+  func isOpenAccessGranted() -> Bool {
+    let fm = NSFileManager.defaultManager()
+    let containerPath = fm.containerURLForSecurityApplicationGroupIdentifier(
+      "group.Emojicons")?.path
+    var error: NSError?
+    fm.contentsOfDirectoryAtPath(containerPath!, error: &error)
+    if (error != nil) {
+      NSLog("Full Access: Off")
+      return false
+    }
+    NSLog("Full Access: On");
+    return true
   }
   
   private func setupGestures(){
@@ -96,17 +126,21 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   //MARK: - Gestures
   
   @IBAction func rightSwipe(sender: UISwipeGestureRecognizer) {
-    var title = emojiDataSource.previousCategory()
-    titleView.previousPage()
-    updateTitle()
-    reloadEmojes()
+    if currentTab == KeyboardMode.Normal{
+      var title = emojiDataSource.previousCategory()
+      titleView.previousPage()
+      updateTitle()
+      reloadEmojes()
+    }
   }
   
   @IBAction func leftSwipe(sender: UISwipeGestureRecognizer) {
-    var title = emojiDataSource.nextCategory()
-    titleView.nextPage()
-    updateTitle()
-    reloadEmojes()
+    if currentTab == KeyboardMode.Normal{
+      var title = emojiDataSource.nextCategory()
+      titleView.nextPage()
+      updateTitle()
+      reloadEmojes()
+    }
   }
   
   //MARK: - TabBarProtocol
@@ -129,8 +163,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
       switch (mode){
       case .Normal:
         titleView.hidden = false
+        noFavorites.hidden = true
+      case .Favorites:
+        titleView.hidden = true
       default:
         titleView.hidden = true
+        noFavorites.hidden = true
       }
       currentTab = mode
       showHideTilteBar()
@@ -146,6 +184,12 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
         self.backspaceDelete()
       }
     })
+  }
+  
+  /////
+  
+  func favoritesRefreshed(#empty: Bool){
+    noFavorites.hidden = !empty
   }
   
 }
