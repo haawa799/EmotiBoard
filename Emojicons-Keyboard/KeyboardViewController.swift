@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import EmojiKit
+
 
 class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , TabBarProtocol, EmojiCollectionDataSourceDelegate {
   
@@ -64,6 +66,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
     {
       proxy.insertText(cell.label.text!)
       cell.kaomoji?.date = NSDate()
+      KaomojiCoreDataManager.sharedInstance.managedObjectContext!.save(nil)
     }
   }
   
@@ -153,7 +156,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
     isBackspacePressed = false
   }
   
-  func nextKeyboardPressed(){
+  @IBAction func nextKeyboardPressed(){
     advanceToNextInputMode()
   }
   

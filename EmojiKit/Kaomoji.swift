@@ -26,21 +26,28 @@ public class Kaomoji: NSManagedObject {
     kaomoji.oldCategory = oldCategory
     
     switch (oldCategory){
-    case 5,29:
+    case 4,10,24://5,29:
       kaomoji.categoryIndex = 0
-    case 7,28:
+    case 7,13,15,27,28://7,28:
       kaomoji.categoryIndex = 1
-    case 1:
+    case 1,3,25,41:
       kaomoji.categoryIndex = 2
-    case 11:
+    case 2,9,26:
       kaomoji.categoryIndex = 3
-    case 13,15,16,18,20:
+    case 6,8,12,22,23:
       kaomoji.categoryIndex = 4
-    case 8:
+    case 32,40,45:
       kaomoji.categoryIndex = 5
-    
+    case 13,15,16,18,20:
+      kaomoji.categoryIndex = 6
+    case 46:
+      kaomoji.categoryIndex = 7
+    case 42:
+      kaomoji.categoryIndex = 8
+    case 39,44,47,49:
+      kaomoji.categoryIndex = 9
     default:
-      kaomoji.categoryIndex = 10
+      kaomoji.categoryIndex = -1
     }
     
     context.save(nil)

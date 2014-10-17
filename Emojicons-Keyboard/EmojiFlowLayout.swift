@@ -10,9 +10,9 @@ import UIKit
 
 class EmojiFlowLayout: UICollectionViewFlowLayout {
   
-  let optimalWidth:Float = 150.0
+  var optimalWidth:Float = 0.0
   
-  let optimalHeight:Float = 40.0
+  var optimalHeight:Float = 0.0
   
   let minLineSpace:Float = 1.0
   let minItemSpace:Float = 1.0
@@ -26,6 +26,14 @@ class EmojiFlowLayout: UICollectionViewFlowLayout {
   override func prepareLayout()
   {
     super.prepareLayout()
+    
+    if UIDevice.currentDevice().userInterfaceIdiom == .Pad{
+      optimalWidth = 190.0
+      optimalHeight = 45.0
+    }else{
+      optimalWidth = 120.0
+      optimalHeight = 35.0
+    }
     
     columns = Int(Float(self.collectionView!.bounds.size.width) / optimalWidth)
     rows = Int(Float(self.collectionView!.bounds.size.height) / optimalHeight)

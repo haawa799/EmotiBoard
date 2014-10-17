@@ -13,13 +13,12 @@ class EmojiCollectionViewCell: UICollectionViewCell {
   
   @IBOutlet weak var favoriteImageView: UIImageView!
   @IBOutlet weak var label: UILabel!
-  @IBOutlet weak var textView: UITextView!
+  var pressed = false
   
   var kaomoji: Kaomoji?{
     didSet{
       if let kaomoji = kaomoji{
         label.text = kaomoji.text
-//        textView.text = kaomoji.text
         showHideFavoriteView()
       }
     }
@@ -28,26 +27,50 @@ class EmojiCollectionViewCell: UICollectionViewCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
+    loadView()
   }
   
   override func prepareForReuse(){
     super.prepareForReuse()
-    label.text = nil
-    println("reuse")
+    label.text = ""
   }
   
   func loadView()
   {
-    var longPress = UILongPressGestureRecognizer(target: self, action: Selector.convertFromStringLiteral("longPress:"))
-    self.addGestureRecognizer(longPress)
+    var press = UILongPressGestureRecognizer(target: self, action: Selector.convertFromStringLiteral("press:"))
+    self.addGestureRecognizer(press)
   }
   
-  func longPress(gesture: UILongPressGestureRecognizer){
-    if gesture.state == UIGestureRecognizerState.Ended{
-      favoriteStateChanged()
-      showHideFavoriteView()
-      playBlumpAnimation()
+  func press(gesture: UILongPressGestureRecognizer){
+    
+    if gesture.state == UIGestureRecognizerState.Began{
+      NSLog("minimum duration elapsed")
+      pressed = true
+      
+      delay(0.3, closure: {
+        if self.pressed{
+          self.favoriteStateChanged()
+          self.showHideFavoriteView()
+          self.playBlumpAnimation()
+        }
+      })
+      
+    }else if gesture.state == UIGestureRecognizerState.Ended{
+      pressed = false
     }
+    
+    if gesture.state == UIGestureRecognizerState.Ended{
+      
+    }
+  }
+  
+  private func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+      dispatch_time(
+        DISPATCH_TIME_NOW,
+        Int64(delay * Double(NSEC_PER_SEC))
+      ),
+      dispatch_get_main_queue(), closure)
   }
   
   func favoriteStateChanged(){

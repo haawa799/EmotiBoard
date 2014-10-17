@@ -14,10 +14,12 @@ enum EmojiCategory: Int{
   case LoveCute = 1
   case Angry = 2
   case Surprised = 3
-  case Animals = 4
-  case Sad = 5
-  case NoYes = 6
-  case Other = 7
+  case Sad = 4
+  case Bored = 5
+  case Animals = 6
+  case Mustaches = 7
+  case FoodDrink  = 8
+  case Others = 9
   
   func description() -> String{
     switch (self){
@@ -29,14 +31,18 @@ enum EmojiCategory: Int{
       return "Angry"
     case .Surprised :
       return "Surprised"
-    case .Animals :
-      return "Animals"
     case .Sad :
       return "Sad"
-    case .NoYes :
-      return "Yes/No"
-    case .Other :
-      return "Other"
+    case .Bored :
+      return "Bored"
+    case .Animals :
+      return "Animals"
+    case .Mustaches :
+      return "Mustaches"
+    case .FoodDrink :
+      return "Food/Drinks"
+    case .Others :
+      return "Others"
     }
   }
   
@@ -97,7 +103,7 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   }
   
   func nextCategory() -> String{
-    if category.toRaw() < EmojiCategory.Other.toRaw(){
+    if category.toRaw() < EmojiCategory.Others.toRaw(){
       category = EmojiCategory.fromRaw(category.toRaw()+1)!
     }
     return category.description()
