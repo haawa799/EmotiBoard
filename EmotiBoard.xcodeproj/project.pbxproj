@@ -14,7 +14,7 @@
 		431B97D219D413A30047B810 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97D019D413A30047B810 /* LaunchScreen.xib */; };
 		431B97DE19D413A30047B810 /* EmojiconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97DD19D413A30047B810 /* EmojiconsTests.swift */; };
 		431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97EF19D4144E0047B810 /* KeyboardViewController.swift */; };
-		431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		431B97F319D4144E0047B810 /* EmotiBoard-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FA19D415AC0047B810 /* KeyboardView.xib */; };
 		431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980719D449250047B810 /* EmojiFlowLayout.swift */; };
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
@@ -99,7 +99,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				431B97F319D4144E0047B810 /* Emojicons-Keyboard.appex in Embed App Extensions */,
+				431B97F319D4144E0047B810 /* EmotiBoard-Keyboard.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,17 +118,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		431B97C219D413A30047B810 /* Emojicons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojicons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		431B97C219D413A30047B810 /* EmotiBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmotiBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B97C619D413A30047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97C719D413A30047B810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		431B97C919D413A30047B810 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		431B97CC19D413A30047B810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		431B97CE19D413A30047B810 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		431B97D119D413A30047B810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		431B97D719D413A30047B810 /* EmojiconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		431B97D719D413A30047B810 /* EmotiBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotiBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B97DC19D413A30047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97DD19D413A30047B810 /* EmojiconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiconsTests.swift; sourceTree = "<group>"; };
-		431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Emojicons-Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EmotiBoard-Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B97EE19D4144E0047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97EF19D4144E0047B810 /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
 		431B97FA19D415AC0047B810 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
@@ -213,9 +213,9 @@
 		431B97C319D413A30047B810 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				431B97C219D413A30047B810 /* Emojicons.app */,
-				431B97D719D413A30047B810 /* EmojiconsTests.xctest */,
-				431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */,
+				431B97C219D413A30047B810 /* EmotiBoard.app */,
+				431B97D719D413A30047B810 /* EmotiBoardTests.xctest */,
+				431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */,
 				4332167019DDBAB600E3E9B9 /* EmojiKit.framework */,
 				4332167A19DDBAB600E3E9B9 /* EmojiKitTests.xctest */,
 			);
@@ -343,9 +343,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		431B97C119D413A30047B810 /* Emojicons */ = {
+		431B97C119D413A30047B810 /* EmotiBoard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 431B97E119D413A30047B810 /* Build configuration list for PBXNativeTarget "Emojicons" */;
+			buildConfigurationList = 431B97E119D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard" */;
 			buildPhases = (
 				431B97BE19D413A30047B810 /* Sources */,
 				431B97BF19D413A30047B810 /* Frameworks */,
@@ -361,14 +361,14 @@
 				4332168319DDBAB600E3E9B9 /* PBXTargetDependency */,
 				4332168719DDBAB600E3E9B9 /* PBXTargetDependency */,
 			);
-			name = Emojicons;
+			name = EmotiBoard;
 			productName = Emojicons;
-			productReference = 431B97C219D413A30047B810 /* Emojicons.app */;
+			productReference = 431B97C219D413A30047B810 /* EmotiBoard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		431B97D619D413A30047B810 /* EmojiconsTests */ = {
+		431B97D619D413A30047B810 /* EmotiBoardTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmojiconsTests" */;
+			buildConfigurationList = 431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoardTests" */;
 			buildPhases = (
 				431B97D319D413A30047B810 /* Sources */,
 				431B97D419D413A30047B810 /* Frameworks */,
@@ -379,14 +379,14 @@
 			dependencies = (
 				431B97D919D413A30047B810 /* PBXTargetDependency */,
 			);
-			name = EmojiconsTests;
+			name = EmotiBoardTests;
 			productName = EmojiconsTests;
-			productReference = 431B97D719D413A30047B810 /* EmojiconsTests.xctest */;
+			productReference = 431B97D719D413A30047B810 /* EmotiBoardTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		431B97EA19D4144E0047B810 /* Emojicons-Keyboard */ = {
+		431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "Emojicons-Keyboard" */;
+			buildConfigurationList = 431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard-Keyboard" */;
 			buildPhases = (
 				431B97E719D4144E0047B810 /* Sources */,
 				431B97E819D4144E0047B810 /* Frameworks */,
@@ -396,9 +396,9 @@
 			);
 			dependencies = (
 			);
-			name = "Emojicons-Keyboard";
+			name = "EmotiBoard-Keyboard";
 			productName = "Emojicons-Keyboard";
-			productReference = 431B97EB19D4144E0047B810 /* Emojicons-Keyboard.appex */;
+			productReference = 431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		4332166F19DDBAB600E3E9B9 /* EmojiKit */ = {
@@ -478,7 +478,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 431B97BD19D413A30047B810 /* Build configuration list for PBXProject "Emojicons" */;
+			buildConfigurationList = 431B97BD19D413A30047B810 /* Build configuration list for PBXProject "EmotiBoard" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -491,9 +491,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				431B97C119D413A30047B810 /* Emojicons */,
-				431B97D619D413A30047B810 /* EmojiconsTests */,
-				431B97EA19D4144E0047B810 /* Emojicons-Keyboard */,
+				431B97C119D413A30047B810 /* EmotiBoard */,
+				431B97D619D413A30047B810 /* EmotiBoardTests */,
+				431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */,
 				4332166F19DDBAB600E3E9B9 /* EmojiKit */,
 				4332167919DDBAB600E3E9B9 /* EmojiKitTests */,
 			);
@@ -612,22 +612,22 @@
 /* Begin PBXTargetDependency section */
 		431B97D919D413A30047B810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 431B97C119D413A30047B810 /* Emojicons */;
+			target = 431B97C119D413A30047B810 /* EmotiBoard */;
 			targetProxy = 431B97D819D413A30047B810 /* PBXContainerItemProxy */;
 		};
 		431B97F219D4144E0047B810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 431B97EA19D4144E0047B810 /* Emojicons-Keyboard */;
+			target = 431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */;
 			targetProxy = 431B97F119D4144E0047B810 /* PBXContainerItemProxy */;
 		};
 		431B97F519D4144E0047B810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 431B97EA19D4144E0047B810 /* Emojicons-Keyboard */;
+			target = 431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */;
 			targetProxy = 431B97F419D4144E0047B810 /* PBXContainerItemProxy */;
 		};
 		4332167C19DDBAB600E3E9B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 431B97C119D413A30047B810 /* Emojicons */;
+			target = 431B97C119D413A30047B810 /* EmotiBoard */;
 			targetProxy = 4332167B19DDBAB600E3E9B9 /* PBXContainerItemProxy */;
 		};
 		4332168319DDBAB600E3E9B9 /* PBXTargetDependency */ = {
@@ -666,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -709,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -744,6 +746,7 @@
 		431B97E219D413A30047B810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Emojicons/Emojicons.entitlements;
@@ -751,7 +754,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Emojicons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmotiBoard;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -762,6 +765,7 @@
 		431B97E319D413A30047B810 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Emojicons/Emojicons.entitlements;
@@ -769,7 +773,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Emojicons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmotiBoard;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Emojicons/Emojicons-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -790,7 +794,7 @@
 				);
 				INFOPLIST_FILE = EmojiconsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmotiBoardTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
 			};
 			name = Debug;
@@ -805,7 +809,7 @@
 				);
 				INFOPLIST_FILE = EmojiconsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EmotiBoardTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
 			};
 			name = Release;
@@ -822,7 +826,7 @@
 				);
 				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EmotiBoard-Keyboard";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -836,7 +840,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Emojicons-Keyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EmotiBoard-Keyboard";
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
@@ -921,7 +925,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		431B97BD19D413A30047B810 /* Build configuration list for PBXProject "Emojicons" */ = {
+		431B97BD19D413A30047B810 /* Build configuration list for PBXProject "EmotiBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431B97DF19D413A30047B810 /* Debug */,
@@ -930,7 +934,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		431B97E119D413A30047B810 /* Build configuration list for PBXNativeTarget "Emojicons" */ = {
+		431B97E119D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431B97E219D413A30047B810 /* Debug */,
@@ -939,7 +943,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmojiconsTests" */ = {
+		431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoardTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431B97E519D413A30047B810 /* Debug */,
@@ -948,7 +952,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "Emojicons-Keyboard" */ = {
+		431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard-Keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				431B97F719D4144E0047B810 /* Debug */,
