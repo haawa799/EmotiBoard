@@ -64,9 +64,9 @@ class TableViewController: UIViewController, UITableViewDataSource {
       }else if indexPath.row == 4{
         atribString = NSMutableAttributedString(string: "Add New Keyboard")
       }else if indexPath.row == 5{
-        atribString = NSMutableAttributedString(string: "Select Emojicons")
+        atribString = NSMutableAttributedString(string: "Select EmotiBoard")
       }else if indexPath.row == 6{
-        atribString = NSMutableAttributedString(string: "Tap Emojicons-Emojicons")
+        atribString = NSMutableAttributedString(string: "Tap EmotiBoard-EmotiBoard")
       }else if indexPath.row == 7{
         atribString = NSMutableAttributedString(string: "Allow full access")
         cell.rightImage.image = UIImage(named: "switch")

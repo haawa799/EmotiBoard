@@ -6,7 +6,7 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="Emojicons_Keyboard" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KeyboardViewController" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="3RN-pf-iCC" id="fM9-3t-SwV"/>
                 <outlet property="fullAccessView" destination="NDg-uc-d42" id="4Bv-Vx-vX0"/>
@@ -18,14 +18,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="341" height="176"/>
+            <rect key="frame" x="0.0" y="0.0" width="346" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-WA-4sr" userLabel="Container">
-                    <rect key="frame" x="0.0" y="0.0" width="341" height="176"/>
+                    <rect key="frame" x="0.0" y="0.0" width="346" height="184"/>
                     <subviews>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlV-fZ-1yt">
-                            <rect key="frame" x="0.0" y="26" width="341" height="121"/>
+                            <rect key="frame" x="0.0" y="26" width="346" height="127"/>
                             <attributedString key="attributedText">
                                 <fragment content="Long press ">
                                     <attributes>
@@ -58,28 +58,29 @@
                             </attributedString>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-24-dlo" userLabel="TabBar" customClass="TabBar" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="147" width="341" height="29"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHc-24-dlo" userLabel="TabBar" customClass="TabBar" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="153" width="346" height="31"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-Tv-ODS" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="68" height="29"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-Tv-ODS" customClass="TabButton" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="69" height="31"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNS-UC-zWZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="67" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="68" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1K0-I2-T8a">
-                                                    <rect key="frame" x="20" y="2" width="26" height="26"/>
+                                                    <rect key="frame" x="22" y="4" width="23" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="1K0-I2-T8a" secondAttribute="height" multiplier="1:1" id="HD1-UX-eHD"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="globe">
+                                                    <state key="normal" backgroundImage="browser_on">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="selected" backgroundImage="browser_off"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" secondItem="1K0-I2-T8a" secondAttribute="height" multiplier="1.1" id="64h-LH-4Os"/>
+                                                <constraint firstAttribute="height" secondItem="1K0-I2-T8a" secondAttribute="height" multiplier="1.3" id="64h-LH-4Os"/>
                                                 <constraint firstAttribute="centerY" secondItem="1K0-I2-T8a" secondAttribute="centerY" id="7vT-ag-698"/>
                                                 <constraint firstAttribute="centerX" secondItem="1K0-I2-T8a" secondAttribute="centerX" id="r9D-4q-aOo"/>
                                             </constraints>
@@ -106,26 +107,27 @@
                                         <outlet property="backgroundView" destination="ZNS-UC-zWZ" id="4y8-cW-E32"/>
                                     </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-YF-rxA" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                                    <rect key="frame" x="68" y="0.0" width="68" height="29"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWo-YF-rxA" customClass="TabButton" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                                    <rect key="frame" x="69" y="0.0" width="69" height="31"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uj8-e7-8KL">
-                                            <rect key="frame" x="1" y="0.0" width="66" height="29"/>
+                                            <rect key="frame" x="1" y="0.0" width="67" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDl-gC-2k5">
-                                                    <rect key="frame" x="20" y="2" width="26" height="26"/>
+                                                    <rect key="frame" x="22" y="4" width="24" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="bDl-gC-2k5" secondAttribute="height" multiplier="1:1" id="t3D-6I-EcE"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="smiley">
+                                                    <state key="normal" backgroundImage="smiles_on">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="selected" backgroundImage="smiles_off"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="bDl-gC-2k5" secondAttribute="centerX" id="AlU-Xf-8E0"/>
-                                                <constraint firstAttribute="height" secondItem="bDl-gC-2k5" secondAttribute="height" multiplier="1.1" id="oHO-xX-t3W"/>
+                                                <constraint firstAttribute="height" secondItem="bDl-gC-2k5" secondAttribute="height" multiplier="1.3" id="oHO-xX-t3W"/>
                                                 <constraint firstAttribute="centerY" secondItem="bDl-gC-2k5" secondAttribute="centerY" id="y6n-RW-Jul"/>
                                             </constraints>
                                         </view>
@@ -144,27 +146,28 @@
                                         <outlet property="backgroundView" destination="Uj8-e7-8KL" id="uUN-b9-3vf"/>
                                     </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-MF-KlB" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                                    <rect key="frame" x="136" y="0.0" width="69" height="29"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-MF-KlB" customClass="TabButton" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                                    <rect key="frame" x="138" y="0.0" width="70" height="31"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBT-QB-1nn">
-                                            <rect key="frame" x="1" y="0.0" width="67" height="29"/>
+                                            <rect key="frame" x="1" y="0.0" width="68" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9a-G8-DBU">
-                                                    <rect key="frame" x="20" y="2" width="27" height="26"/>
+                                                    <rect key="frame" x="22" y="4" width="24" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="n9a-G8-DBU" secondAttribute="height" multiplier="1:1" id="MOx-hr-x9c"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="star">
+                                                    <state key="normal" backgroundImage="star_on">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="selected" backgroundImage="star_off"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="0.39000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="n9a-G8-DBU" secondAttribute="centerY" id="3Sj-Q5-jCE"/>
                                                 <constraint firstAttribute="centerX" secondItem="n9a-G8-DBU" secondAttribute="centerX" id="TOA-g3-GIy"/>
-                                                <constraint firstAttribute="height" secondItem="n9a-G8-DBU" secondAttribute="height" multiplier="1.1" id="d1C-8r-V5G"/>
+                                                <constraint firstAttribute="height" secondItem="n9a-G8-DBU" secondAttribute="height" multiplier="1.3" id="d1C-8r-V5G"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -182,27 +185,28 @@
                                         <outlet property="backgroundView" destination="nBT-QB-1nn" id="Rzn-7s-Gam"/>
                                     </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-iw-RsQ" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                                    <rect key="frame" x="205" y="0.0" width="68" height="29"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-iw-RsQ" customClass="TabButton" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                                    <rect key="frame" x="208" y="0.0" width="69" height="31"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPW-95-L4B">
-                                            <rect key="frame" x="1" y="0.0" width="66" height="29"/>
+                                            <rect key="frame" x="1" y="0.0" width="67" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-4R-4Cn">
-                                                    <rect key="frame" x="20" y="2" width="26" height="26"/>
+                                                    <rect key="frame" x="21" y="4" width="24" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="oPx-4R-4Cn" secondAttribute="height" multiplier="1:1" id="j2Y-cQ-3Re"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="history">
+                                                    <state key="normal" backgroundImage="history_on">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="selected" backgroundImage="history_off"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="0.39000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="oPx-4R-4Cn" secondAttribute="centerY" id="YwC-SH-0is"/>
                                                 <constraint firstAttribute="centerX" secondItem="oPx-4R-4Cn" secondAttribute="centerX" id="yOd-Qy-7yM"/>
-                                                <constraint firstAttribute="height" secondItem="oPx-4R-4Cn" secondAttribute="height" multiplier="1.1" id="zaL-yh-eVi"/>
+                                                <constraint firstAttribute="height" secondItem="oPx-4R-4Cn" secondAttribute="height" multiplier="1.3" id="zaL-yh-eVi"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -220,27 +224,28 @@
                                         <outlet property="backgroundView" destination="bPW-95-L4B" id="uaR-IE-d2z"/>
                                     </connections>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-kf-cX1" customClass="TabButton" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                                    <rect key="frame" x="273" y="0.0" width="68" height="29"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tzz-kf-cX1" customClass="TabButton" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                                    <rect key="frame" x="277" y="0.0" width="69" height="31"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DdG-7F-gPe">
-                                            <rect key="frame" x="1" y="0.0" width="67" height="29"/>
+                                            <rect key="frame" x="1" y="0.0" width="68" height="31"/>
                                             <subviews>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huT-aA-NDS">
-                                                    <rect key="frame" x="21" y="2" width="26" height="26"/>
+                                                    <rect key="frame" x="22" y="4" width="24" height="23"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="huT-aA-NDS" secondAttribute="height" multiplier="1:1" id="meh-6u-3e1"/>
                                                     </constraints>
-                                                    <state key="normal" backgroundImage="backspace">
+                                                    <state key="normal" backgroundImage="backspace_on">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <state key="selected" backgroundImage="backspace_off"/>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.098039215690000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="huT-aA-NDS" secondAttribute="centerX" id="7c8-Hc-ULr"/>
                                                 <constraint firstAttribute="centerY" secondItem="huT-aA-NDS" secondAttribute="centerY" id="D1U-Nh-AB8"/>
-                                                <constraint firstAttribute="height" secondItem="huT-aA-NDS" secondAttribute="height" multiplier="1.1" id="jdi-VG-7fX"/>
+                                                <constraint firstAttribute="height" secondItem="huT-aA-NDS" secondAttribute="height" multiplier="1.3" id="jdi-VG-7fX"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -299,22 +304,22 @@
                             </connections>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="3RN-pf-iCC">
-                            <rect key="frame" x="0.0" y="26" width="341" height="121"/>
+                            <rect key="frame" x="0.0" y="26" width="346" height="127"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xDX-om-ugy" customClass="EmojiFlowLayout" customModule="Emojicons_Keyboard" customModuleProvider="target">
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xDX-om-ugy" customClass="EmojiFlowLayout" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
                                 <size key="itemSize" width="50" height="50"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                 <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-qc-8GD" userLabel="TitleView" customClass="TitleView" customModule="Emojicons_Keyboard" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="341" height="26"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-qc-8GD" userLabel="TitleView" customClass="TitleView" customModule="EmotiBoard_Keyboard" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="346" height="26"/>
                             <subviews>
                                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="lRT-dm-vIL">
-                                    <rect key="frame" x="183" y="-6" width="150" height="37"/>
+                                    <rect key="frame" x="183" y="-6" width="155" height="37"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="150" id="HQI-VQ-DBk"/>
+                                        <constraint firstAttribute="width" constant="155" id="HQI-VQ-DBk"/>
                                     </constraints>
                                 </pageControl>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-1z-1Pb">
@@ -380,10 +385,10 @@
                     </connections>
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NDg-uc-d42" userLabel="No full access">
-                    <rect key="frame" x="0.0" y="0.0" width="341" height="176"/>
+                    <rect key="frame" x="0.0" y="0.0" width="346" height="184"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-Tn-eG0">
-                            <rect key="frame" x="20" y="40" width="301" height="41"/>
+                            <rect key="frame" x="20" y="40" width="306" height="41"/>
                             <attributedString key="attributedText">
                                 <fragment content="Please &quot;">
                                     <attributes>
@@ -410,7 +415,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9k-ZQ-hGI">
-                            <rect key="frame" x="120" y="96" width="101" height="30"/>
+                            <rect key="frame" x="123" y="96" width="101" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Bn2-Uq-Rjh"/>
                                 <constraint firstAttribute="height" constant="30" id="Dlc-tN-weg"/>
@@ -460,7 +465,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="226.5" y="66"/>
+            <point key="canvasLocation" x="229" y="70"/>
         </view>
         <swipeGestureRecognizer direction="right" id="khR-ua-jtn" userLabel="RightSwipe">
             <connections>
@@ -474,10 +479,15 @@
         </swipeGestureRecognizer>
     </objects>
     <resources>
-        <image name="backspace" width="256" height="256"/>
-        <image name="globe" width="512" height="512"/>
-        <image name="history" width="256" height="256"/>
-        <image name="smiley" width="256" height="256"/>
-        <image name="star" width="256" height="256"/>
+        <image name="backspace_off" width="168" height="168"/>
+        <image name="backspace_on" width="168" height="168"/>
+        <image name="browser_off" width="168" height="168"/>
+        <image name="browser_on" width="168" height="168"/>
+        <image name="history_off" width="168" height="168"/>
+        <image name="history_on" width="168" height="168"/>
+        <image name="smiles_off" width="168" height="168"/>
+        <image name="smiles_on" width="168" height="168"/>
+        <image name="star_off" width="168" height="168"/>
+        <image name="star_on" width="168" height="168"/>
     </resources>
 </document>
