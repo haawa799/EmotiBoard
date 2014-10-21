@@ -57,20 +57,20 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   var kaomojis:[Kaomoji]?
   var delegate: EmojiCollectionDataSourceDelegate?
   
-  var tab: KeyboardMode = .Normal{
+  var tab: KeyboardMode = KeyboardMode.Normal{
     didSet{
-      reloadKaomojisFromCoreData()
+      self.reloadKaomojisFromCoreData()
     }
   }
-  
+
   let reuseIdentifier = "Emoji"
   
-  var category:EmojiCategory = .HappyLol{
+  var category:EmojiCategory = EmojiCategory.HappyLol{
     didSet{
-      reloadKaomojisFromCoreData()
+      self.reloadKaomojisFromCoreData()
     }
   }
-  
+
   //    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int
   //    {
   //
@@ -110,8 +110,9 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   }
   
   func previousCategory() -> String{
-    if category.rawValue > EmojiCategory.HappyLol.rawValue{
-      category = EmojiCategory(rawValue: category.rawValue-1)!
+    var q = category.rawValue
+    if q > EmojiCategory.HappyLol.rawValue{
+      category = EmojiCategory(rawValue: q-1)!
     }
     return category.description()
   }
