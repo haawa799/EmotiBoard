@@ -103,15 +103,15 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   }
   
   func nextCategory() -> String{
-    if category.toRaw() < EmojiCategory.Others.toRaw(){
-      category = EmojiCategory.fromRaw(category.toRaw()+1)!
+    if category.rawValue < EmojiCategory.Others.rawValue{
+      category = EmojiCategory(rawValue: category.rawValue+1)!
     }
     return category.description()
   }
   
   func previousCategory() -> String{
-    if category.toRaw() > EmojiCategory.HappyLol.toRaw(){
-      category = EmojiCategory.fromRaw(category.toRaw()-1)!
+    if category.rawValue > EmojiCategory.HappyLol.rawValue{
+      category = EmojiCategory(rawValue: category.rawValue-1)!
     }
     return category.description()
   }
@@ -120,7 +120,7 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   private func reloadKaomojisFromCoreData(){
     
     if tab == KeyboardMode.Normal{
-      kaomojis = KaomojiCoreDataManager.sharedInstance.emojiconsForCategoryIndex(categoryIndex: Int16(category.toRaw()))!
+      kaomojis = KaomojiCoreDataManager.sharedInstance.emojiconsForCategoryIndex(categoryIndex: Int16(category.rawValue))!
     }else if tab == KeyboardMode.Favorites{
       kaomojis = KaomojiCoreDataManager.sharedInstance.favoriteEmojicons()!
       self.delegate?.favoritesRefreshed(empty: kaomojis?.count == 0)

@@ -37,7 +37,7 @@ class EmojiCollectionViewCell: UICollectionViewCell {
   
   func loadView()
   {
-    var press = UILongPressGestureRecognizer(target: self, action: Selector.convertFromStringLiteral("press:"))
+    var press = UILongPressGestureRecognizer(target: self, action: Selector("press:"))
     self.addGestureRecognizer(press)
   }
   
