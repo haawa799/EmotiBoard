@@ -93,7 +93,7 @@ class EmojiCollectionDataSource: NSObject,UICollectionViewDataSource {
   // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
   {
-    var cell: EmojiCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as EmojiCollectionViewCell
+    var cell: EmojiCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! EmojiCollectionViewCell
     
     if let kaomojis = kaomojis{
       cell.kaomoji = kaomojis[indexPath.item]

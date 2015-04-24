@@ -35,7 +35,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
     
     let nib = UINib(nibName: "KeyboardView", bundle: nil)
     let objects = nib.instantiateWithOwner(self, options: nil)
-    let containerView = objects[0] as UIView
+    let containerView = objects[0] as! UIView
     view = containerView
     
     if hasFullAccess{
@@ -61,7 +61,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     //
-    let cell = collectionView.cellForItemAtIndexPath(indexPath) as EmojiCollectionViewCell
+    let cell = collectionView.cellForItemAtIndexPath(indexPath) as! EmojiCollectionViewCell
     if let proxy = self.textDocumentProxy as? UITextDocumentProxy
     {
       proxy.insertText(cell.label.text!)
@@ -181,7 +181,7 @@ class KeyboardViewController: UIInputViewController, UICollectionViewDelegate , 
   }
   
   func backspaceDelete(){
-    (textDocumentProxy as UIKeyInput).deleteBackward()
+    (textDocumentProxy as! UIKeyInput).deleteBackward()
     delay(0.3, closure: {
       if self.isBackspacePressed{
         self.backspaceDelete()

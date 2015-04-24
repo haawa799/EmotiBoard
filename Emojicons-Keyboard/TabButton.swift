@@ -45,7 +45,7 @@ protocol TabButtonDelegate{
   
   @IBOutlet weak var backgroundView: UIView?
   
-  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
     if notSelectable == true{
       isSelected = true
     }else{
@@ -54,7 +54,7 @@ protocol TabButtonDelegate{
     delegate?.tabButtonTouchBegin(tabButton: self)
   }
   
-  override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
+  override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
     if notSelectable == true{
       isSelected = false
     }

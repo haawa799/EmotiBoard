@@ -12,14 +12,12 @@
 		431B97CD19D413A30047B810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431B97CB19D413A30047B810 /* Main.storyboard */; };
 		431B97CF19D413A30047B810 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431B97CE19D413A30047B810 /* Images.xcassets */; };
 		431B97D219D413A30047B810 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97D019D413A30047B810 /* LaunchScreen.xib */; };
-		431B97DE19D413A30047B810 /* EmojiconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97DD19D413A30047B810 /* EmojiconsTests.swift */; };
 		431B97F019D4144E0047B810 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B97EF19D4144E0047B810 /* KeyboardViewController.swift */; };
 		431B97F319D4144E0047B810 /* EmotiBoard-Keyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		431B97FB19D415AC0047B810 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431B97FA19D415AC0047B810 /* KeyboardView.xib */; };
 		431B980819D449260047B810 /* EmojiFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B980719D449250047B810 /* EmojiFlowLayout.swift */; };
 		431B981319D595460047B810 /* EmojiCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981219D595460047B810 /* EmojiCollectionDataSource.swift */; };
 		431B981819D955EE0047B810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431B981719D955EE0047B810 /* TitleView.swift */; };
-		4332168119DDBAB600E3E9B9 /* EmojiKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168019DDBAB600E3E9B9 /* EmojiKitTests.swift */; };
 		4332168419DDBAB600E3E9B9 /* EmojiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; };
 		4332168519DDBAB600E3E9B9 /* EmojiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4332168F19DDBAE500E3E9B9 /* Kaomoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */; };
@@ -47,13 +45,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		431B97D819D413A30047B810 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 431B97BA19D413A20047B810 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 431B97C119D413A30047B810;
-			remoteInfo = Emojicons;
-		};
 		431B97F119D4144E0047B810 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 431B97BA19D413A20047B810 /* Project object */;
@@ -67,13 +58,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 431B97EA19D4144E0047B810;
 			remoteInfo = "Emojicons-Keyboard";
-		};
-		4332167B19DDBAB600E3E9B9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 431B97BA19D413A20047B810 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 431B97C119D413A30047B810;
-			remoteInfo = Emojicons;
 		};
 		4332168219DDBAB600E3E9B9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -124,7 +108,6 @@
 		431B97CC19D413A30047B810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		431B97CE19D413A30047B810 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		431B97D119D413A30047B810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		431B97D719D413A30047B810 /* EmotiBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmotiBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431B97DC19D413A30047B810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431B97DD19D413A30047B810 /* EmojiconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiconsTests.swift; sourceTree = "<group>"; };
 		431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "EmotiBoard-Keyboard.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +119,6 @@
 		431B981719D955EE0047B810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4332167019DDBAB600E3E9B9 /* EmojiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EmojiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4332167319DDBAB600E3E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4332167A19DDBAB600E3E9B9 /* EmojiKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojiKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4332167F19DDBAB600E3E9B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4332168019DDBAB600E3E9B9 /* EmojiKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiKitTests.swift; sourceTree = "<group>"; };
 		4332168E19DDBAE500E3E9B9 /* Kaomoji.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kaomoji.swift; sourceTree = "<group>"; };
@@ -163,13 +145,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		431B97D419D413A30047B810 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		431B97E819D4144E0047B810 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,13 +154,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4332166C19DDBAB600E3E9B9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4332167719DDBAB600E3E9B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -211,10 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				431B97C219D413A30047B810 /* EmotiBoard.app */,
-				431B97D719D413A30047B810 /* EmotiBoardTests.xctest */,
 				431B97EB19D4144E0047B810 /* EmotiBoard-Keyboard.appex */,
 				4332167019DDBAB600E3E9B9 /* EmojiKit.framework */,
-				4332167A19DDBAB600E3E9B9 /* EmojiKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,24 +326,6 @@
 			productReference = 431B97C219D413A30047B810 /* EmotiBoard.app */;
 			productType = "com.apple.product-type.application";
 		};
-		431B97D619D413A30047B810 /* EmotiBoardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoardTests" */;
-			buildPhases = (
-				431B97D319D413A30047B810 /* Sources */,
-				431B97D419D413A30047B810 /* Frameworks */,
-				431B97D519D413A30047B810 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				431B97D919D413A30047B810 /* PBXTargetDependency */,
-			);
-			name = EmotiBoardTests;
-			productName = EmojiconsTests;
-			productReference = 431B97D719D413A30047B810 /* EmotiBoardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard-Keyboard" */;
@@ -413,24 +361,6 @@
 			productReference = 4332167019DDBAB600E3E9B9 /* EmojiKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4332167919DDBAB600E3E9B9 /* EmojiKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4332168D19DDBAB600E3E9B9 /* Build configuration list for PBXNativeTarget "EmojiKitTests" */;
-			buildPhases = (
-				4332167619DDBAB600E3E9B9 /* Sources */,
-				4332167719DDBAB600E3E9B9 /* Frameworks */,
-				4332167819DDBAB600E3E9B9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4332167C19DDBAB600E3E9B9 /* PBXTargetDependency */,
-			);
-			name = EmojiKitTests;
-			productName = EmojiKitTests;
-			productReference = 4332167A19DDBAB600E3E9B9 /* EmojiKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -449,10 +379,6 @@
 							};
 						};
 					};
-					431B97D619D413A30047B810 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 431B97C119D413A30047B810;
-					};
 					431B97EA19D4144E0047B810 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = S55BP53VB8;
@@ -465,10 +391,6 @@
 					4332166F19DDBAB600E3E9B9 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = S55BP53VB8;
-					};
-					4332167919DDBAB600E3E9B9 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 431B97C119D413A30047B810;
 					};
 				};
 			};
@@ -486,10 +408,8 @@
 			projectRoot = "";
 			targets = (
 				431B97C119D413A30047B810 /* EmotiBoard */,
-				431B97D619D413A30047B810 /* EmotiBoardTests */,
 				431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */,
 				4332166F19DDBAB600E3E9B9 /* EmojiKit */,
-				4332167919DDBAB600E3E9B9 /* EmojiKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -504,13 +424,6 @@
 				43DE5ADD19E2B80F00F5544D /* TableViewCell.xib in Resources */,
 				431B97D219D413A30047B810 /* LaunchScreen.xib in Resources */,
 				431B97CF19D413A30047B810 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		431B97D519D413A30047B810 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,13 +449,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4332167819DDBAB600E3E9B9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -555,14 +461,6 @@
 				431B97C819D413A30047B810 /* AppDelegate.swift in Sources */,
 				43EE931319DC0AC600BAA1F2 /* Model.xcdatamodeld in Sources */,
 				43DE5ADB19E2B80F00F5544D /* TableViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		431B97D319D413A30047B810 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				431B97DE19D413A30047B810 /* EmojiconsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,22 +491,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4332167619DDBAB600E3E9B9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4332168119DDBAB600E3E9B9 /* EmojiKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		431B97D919D413A30047B810 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 431B97C119D413A30047B810 /* EmotiBoard */;
-			targetProxy = 431B97D819D413A30047B810 /* PBXContainerItemProxy */;
-		};
 		431B97F219D4144E0047B810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */;
@@ -618,11 +503,6 @@
 			isa = PBXTargetDependency;
 			target = 431B97EA19D4144E0047B810 /* EmotiBoard-Keyboard */;
 			targetProxy = 431B97F419D4144E0047B810 /* PBXContainerItemProxy */;
-		};
-		4332167C19DDBAB600E3E9B9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 431B97C119D413A30047B810 /* EmotiBoard */;
-			targetProxy = 4332167B19DDBAB600E3E9B9 /* PBXContainerItemProxy */;
 		};
 		4332168319DDBAB600E3E9B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -781,40 +661,6 @@
 			};
 			name = Release;
 		};
-		431B97E519D413A30047B810 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EmojiconsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EmotiBoardTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
-			};
-			name = Debug;
-		};
-		431B97E619D413A30047B810 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EmojiconsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = EmotiBoardTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
-			};
-			name = Release;
-		};
 		431B97F719D4144E0047B810 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -901,38 +747,6 @@
 			};
 			name = Release;
 		};
-		4332168A19DDBAB600E3E9B9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EmojiKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
-			};
-			name = Debug;
-		};
-		4332168B19DDBAB600E3E9B9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = EmojiKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Emojicons.app/Emojicons";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -954,15 +768,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		431B97E419D413A30047B810 /* Build configuration list for PBXNativeTarget "EmotiBoardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				431B97E519D413A30047B810 /* Debug */,
-				431B97E619D413A30047B810 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		431B97F619D4144E0047B810 /* Build configuration list for PBXNativeTarget "EmotiBoard-Keyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -977,15 +782,6 @@
 			buildConfigurations = (
 				4332168819DDBAB600E3E9B9 /* Debug */,
 				4332168919DDBAB600E3E9B9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4332168D19DDBAB600E3E9B9 /* Build configuration list for PBXNativeTarget "EmojiKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4332168A19DDBAB600E3E9B9 /* Debug */,
-				4332168B19DDBAB600E3E9B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
